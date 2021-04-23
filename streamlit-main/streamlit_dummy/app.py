@@ -5,7 +5,7 @@ from apps import about, data, models, home # import your app modules here
 
 app = MultiApp()
 
-st.title(' Ravenclaw Team welcomes you to our website')
+st.title(' Dooku Welcomes you to the DARK SIDE')
 st.text('')
 st.text('')
 st.text('')
@@ -14,17 +14,17 @@ st.markdown("![Alt Text](https://media4.giphy.com/media/lKYMj63WqlBcc/giphy.gif?
 
 
 st.markdown('''
-# Book Project
+# Project Baby Yoda
 
 Please select a page:
 
 ''')
 
 # Add all your application here
-app.add_app('Home',home.app)
-app.add_app("About", about.app)
-app.add_app("Data", data.app)
-app.add_app('Models', models.app)
+app.add_app('Home',info.app)
+app.add_app("About", intro.app)
+#app.add_app("Data", data.app)
+#app.add_app('Models', models.app)
 
 
 
