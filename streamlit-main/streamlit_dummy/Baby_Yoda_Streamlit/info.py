@@ -18,7 +18,7 @@ import seaborn as sns
 
 def app():
     
-    st.title(' Dooku Welcomes you to the DARK SIDE')
+    st.title(' WELCOME TO THE DARK SIDE')
     st.text('')
     st.text('')
     st.markdown("![Data](https://media.giphy.com/media/DeOUbnXkLU6B2/giphy.gif)")
@@ -49,7 +49,7 @@ def app():
     solution = pca_df.iloc[row_sol, :2]
 
     with data:
-        st.title('How I caught this annoying little  thing!!')
+        st.title("DOOKU'S PLAN TO CATCH THIS THING !!")
         st.text('')
         st.text('')
         st.markdown("![x](https://media.giphy.com/media/WkOAurEV1T42tCq5VF/giphy.gif)")
@@ -60,9 +60,10 @@ def app():
         #if st.checkbox('Show Me the Intel!'):
          #   st.subheader('Which Galaxy hmmm.')
          #   st.write(galaxies)
-
+    
     with media:
-        with st.beta_expander("• Find out which Galaxy that tiny thing is hiding in!"):
+        st.markdown("# Dooku's Master Plan Deciphered")
+        with st.beta_expander("•Find out which Galaxy that tiny thing is hiding in!"):
             st.markdown('## From the intel collected I suspect he is in one of these 3 Galaxies, but which one?')
             st.text('')
             st.text('')
@@ -93,10 +94,12 @@ def app():
             plt.scatter(x=data_2[:,0],y=data_2[:,1])
             st.pyplot()
             st.set_option('deprecation.showPyplotGlobalUse', False)
+            st.set_option('deprecation.showPyplotGlobalUse', False)
+            st.set_option('deprecation.showPyplotGlobalUse', False)
             st.markdown('## I got it! I can use the Dark side Power to narrow it down')
         st.text('')
         st.text('')
-        with st.beta_expander("• The Power of the Dark Side!"):
+        with st.beta_expander("•The Power of the Dark Side!"):
             
             st.markdown('### Dark Side KMeans will help me find out the right Galaxy! I can group each planet into one of the three Galaxies')
             st.text('')
@@ -145,7 +148,7 @@ def app():
             st.pyplot()
         st.text('')
         st.text('')
-        with st.beta_expander("• Double Quick Math!"):
+        with st.beta_expander("• Quick Math!"):
             st.markdown('## Now I use the two biggest bar graphs to map out where that little green turd is.')
             st.text('')
             st.text('')
@@ -165,7 +168,7 @@ def app():
             
             plt.scatter(solution[0], solution[1],c='purple')
             st.pyplot()
-            st.markdown("![x]( https://media.giphy.com/media/gYSGoXTuVYASI/giphy.gif)")
+        st.markdown("![x]( https://media.giphy.com/media/gYSGoXTuVYASI/giphy.gif)")
            
 app()  
     
