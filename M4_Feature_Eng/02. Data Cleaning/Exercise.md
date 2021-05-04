@@ -5,15 +5,15 @@
 ### ❓ Missing values
 
 1. What is the missing datatype used in pandas?
-2. How to replace all occurences of the value 9999 to missing in pandas?
-3. How to get the absolute number of missings for each variable in pandas?
-4. How to get the percentage of missings for each variable in pandas?
-5. How to drop rows with missing values?
-6. How to drop variables with missing values?
-7. What is the univariate imputation method in sklearn?
-8. What is the multivariate imputation method in sklearn?
-9. What is the best univariate imputation method to categorical variables? (Explain why)
-10. What is the best univariate imputation method to numerical variables? (Explain why)
+2. How to replace all occurences of the value 9999 to missing in pandas? `df.replace(9999, np.NaN)`
+3. How to get the absolute number of missings for each variable in pandas?`df.isnull().sum()` or `df.isna().sum()`
+4. How to get the percentage of missings for each variable in pandas?`df.isnull().sum() / len(df)` or `df.isna().sum() / len(df)`
+5. How to drop rows with missing values?`df.dropna(axis=0)` or `df.dropna(axis="index")`
+6. How to drop variables with missing values?`df.dropna(axis=1)` or `df.dropna(axis="columns")`
+7. What is the univariate imputation method in sklearn?`SimpleImputer()`
+8. What is the multivariate imputation method in sklearn?`IterativeImputer()` and `KNNImputer()`
+9. What is the best univariate imputation method to categorical variables? (Explain why)`SimpleImputer(strategy="constant", fill_value="missing")` because its creates a new category for missings.
+10. What is the best univariate imputation method to numerical variables? (Explain why)`SimpleImputer` with `strategy="mean"` or `"median"` but with `add_indicator=True` because its creates a new column indicating the missing.
 
 
 ### 🔎 Outliers
@@ -23,6 +23,12 @@
 3. What is novelty detection?
 4. Name 4 advanced methods of outlier detection in sklearn.
 
+
+
+1. It is a value that is a rare case. Observations that are far from the others.
+2. Plotting the distribution showing the points, something like a boxplot or a stripplot. Then remove the outlier by clipping the variable.
+3. Data is not polluted by outliers and we are interested in detecting whether a **new** observation is an outlier.
+4. `svm.OneClassSVM`, `ensemble.IsolationForest`, `neighbors.LocalOutlierFactor` and `covariance.EllipticEnvelope`.
 
 ### 🖋 Typos
 
@@ -37,6 +43,10 @@ Consider the following dataset: [San Francisco Building Permits](https://www.kag
 
 - Which, if either, are missing because they don't exist?
 - Which, if either, are missing because they weren't recorded?
+
+- "Street Number Suffix": Missing because it does not exist.
+- "Zipcode": Missing because it was not recorded.
+
 
 Hint: Do all addresses generally have a street number suffix? Do all addresses generally have a zipcode?
 
