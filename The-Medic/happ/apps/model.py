@@ -181,4 +181,6 @@ def app():
         results_ord.index += 1 
         
         clear_output(wait=True)
-    st.write(results_ord.style.bar(subset=['Accuracy', 'Bal Acc.'], vmin=0, vmax=100, color='#5fba7d'))
+    #st.write(results_ord.style.bar(subset=['Accuracy', 'Bal Acc.'], vmin=0, vmax=100, color='#5fba7d'))
+
+    st.markdown()
