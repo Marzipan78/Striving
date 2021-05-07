@@ -44,62 +44,104 @@ def app():
     #X = iris.data
     #Y = iris.target
     # Prepo
-    num_vars = ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach',
-       'exang', 'oldpeak', 'slope', 'ca', 'thal']
+    cat_vars  = ['sex','cp','fbs','restecg','exang','slope','ca','thal']
+    num_vars  = ['age', 'trestbps', 'chol', 'thalach', 'oldpeak']
+    
+    num_4_tree = pipeline.Pipeline(steps=[
+    ('imputer', impute.SimpleImputer(strategy='mean', add_indicator=False)),])
 
-    num_4_treeModels = pipeline.Pipeline(steps=[('imputer', impute.SimpleImputer(strategy='constant', fill_value=-9999))])
+    cat_4_tree = pipeline.Pipeline(steps=[
+        ('imputer', impute.SimpleImputer(strategy='constant',)),
+        #('onehot', preprocessing.OneHotEncoder(handle_unknown='ignore'))
+    ])
+
     tree_prepro = compose.ColumnTransformer(transformers=[
-                                        ('num', num_4_treeModels, num_vars)
-                                        ], remainder='drop') 
-    tree_prepro
+        ('num', num_4_tree, num_vars),
+        ('cat', cat_4_tree, cat_vars),
+    ], remainder='drop')
+
+
+
+    num_4_mult = pipeline.Pipeline(steps=[
+        ('imputer', impute.SimpleImputer(strategy='mean', add_indicator=True)), # mean, median
+        ('scaler', preprocessing.StandardScaler())
+    ])
+
+    cat_4_mult = pipeline.Pipeline(steps=[
+        ('imputer', impute.SimpleImputer(strategy='constant')),
+        #('onehot', preprocessing.OneHotEncoder(handle_unknown='ignore'))
+    ])
+
+    mult_prepro = compose.ColumnTransformer(transformers=[
+        ('num', num_4_mult, num_vars),
+        ('cat', cat_4_mult, cat_vars),
+    ], remainder='drop') 
+
+
+
     # Model building
     
+    mult_classifiers = {
+  "LogRegr":        LogisticRegression(),
+  "Ridge":          RidgeClassifier(),
+  "SVM_lin":         SVC(kernel="linear", probability=True), # C=0.025
+  "SVM_rbf":         SVC(kernel='rbf', probability=True),
+  "NuSVC":           NuSVC(probability=True),
+  "LinearSVC":       LinearSVC(),
+  "KNN3":            KNeighborsClassifier(3),
+  "KNN5":            KNeighborsClassifier(5),
+  "GaussianNB":      GaussianNB()
+}
+
     tree_classifiers = {
     "Decision Tree": DecisionTreeClassifier(),
-    "Extra Trees":   ExtraTreesClassifier(n_estimators=100),
-    "Random Forest": RandomForestClassifier(n_estimators=100),
-    "AdaBoost":      AdaBoostClassifier(n_estimators=100),
-    "Skl GBM":       GradientBoostingClassifier(n_estimators=100),
-    "Skl HistGBM":   HistGradientBoostingClassifier(max_iter=100),
-    #"XGBoost":       XGBClassifier(n_estimators=100),
-    #"LightGBM":      LGBMClassifier(n_estimators=100),
-    
-    } 
+    "Extra Trees": ExtraTreesClassifier(),
+    "Random Forest": RandomForestClassifier(),
+    "AdaBoost": AdaBoostClassifier(),
+    "Skl GBM": GradientBoostingClassifier(),
+    "Skl HistGBM": GradientBoostingClassifier(),
+    "XGBoost": XGBClassifier(),
+    'LightGBM': LGBMClassifier(),
+    'CatBoost': CatBoostClassifier()}
 
-    tree_classifiers = {name: pipeline.make_pipeline(tree_prepro, model) for name, model in tree_classifiers.items()}
+
+    mult_classifiers = {name: pipeline.make_pipeline(mult_prepro, model) for name, model in mult_classifiers.items()}
+    tree_classifiers = {name: pipeline.make_pipeline(prepro, model) for name, model in tree_classifiers.items()}
+
+    models = {**mult_classifiers, **tree_classifiers}
+
     #tree_classifiers["LightGBM"]
     st.header('Model performance')
 
     #with split
 
-    x_train, x_val, y_train, y_val = model_selection.train_test_split(
-    x, y,
-    test_size=0.2,
-    stratify = y,   
-    random_state=4  
-)
+    x = full_df[num_vars + cat_vars]
+    y = full_df.target
+
+    x_train, x_val, y_train, y_val = model_selection.train_test_split(x,y,test_size=0.2,stratify=y,random_state=0)
+
 
     results = pd.DataFrame({'Model': [], 'Accuracy': [], 'Bal Acc.': [], 'Time': []})
 
-    for model_name, model in tree_classifiers.items():
 
+    for model_name, model in models.items():
+        
         start_time = time.time()
-        model.fit(x_train, y_train)
-        total_time = time.time() - start_time
-        
+        model.fit(x_train,y_train)
         pred = model.predict(x_val)
-        
+        total_time = time.time() - start_time
+
         results = results.append({"Model":    model_name,
                                 "Accuracy": metrics.accuracy_score(y_val, pred)*100,
                                 "Bal Acc.": metrics.balanced_accuracy_score(y_val, pred)*100,
                                 "Time":     total_time},
                                 ignore_index=True)
-        
-        results_ord = results.sort_values(by=['Accuracy'], ascending=False, ignore_index=True)
-        results_ord.index += 1 
-        
-        clear_output(wait=True)
-    display(results_ord.style.bar(subset=['Accuracy', 'Bal Acc.'], vmin=0, vmax=100, color='#5fba7d'))
+                                
+
+
+    results_ord = results.sort_values(by=['Accuracy'], ascending=False, ignore_index=True)
+    results_ord.index += 1 
+    results_ord.style.bar(subset=['Accuracy', 'Bal Acc.'], vmin=0, vmax=100, color='#5fba7d')
 
     skf = model_selection.StratifiedKFold(n_splits=10, shuffle=True, random_state=0)
 

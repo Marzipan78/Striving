@@ -15,6 +15,8 @@ def app():
     with data:
         if st.checkbox('Explore Data'):
             df = pd.read_csv('augheart.csv')
+            df =df.drop(['Unnamed: 0'], axis = 1 )
+            
             st.subheader('People Studied')
 
     
