@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from pandas_profiling import ProfileReport
-#from streamlit_pandas_profiling import st_profile_report
+from streamlit_pandas_profiling import st_profile_report
 
 
 def app():
@@ -20,7 +20,7 @@ def app():
             csv = pd.read_csv(uploaded_file)
             return csv
         df = load_csv()
-         pr = ProfileReport(df, explorative=True)
+        pr = ProfileReport(df, explorative=True)
         st.header('**Input DataFrame**')
         st.write(df)
         st.write('---')
