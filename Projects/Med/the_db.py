@@ -9,7 +9,7 @@ def create_usertable():
 
 def add_userdata(username,password):
     c.execute('INSERT INTO userstable(username,password) VALUES (?,?)',(username,password))
-	conn.commit()
+    conn.commit()
 
 def login_user(username,password):
 	c.execute('SELECT * FROM userstable WHERE username =? AND password = ?',(username,password))

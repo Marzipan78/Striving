@@ -5,10 +5,27 @@ import numpy as np
 
 import os 
 import joblib
+import hashlib 
 
+#Dataviz
 import matplotlib.pyplot as plt 
 import matplotlib
 matplotlib.use("Agg")
+
+#DB
+from the_db import *
+
+#Password
+def generate_hashes(password):
+    return hashlib.sha256(str.encode(password)).hexdigest()
+
+def verify_hashes(password,hashed_text):
+    if generate_hashes(password) == hashed_text:
+        return hashed_text
+    return False
+
+
+
 
 def main():
     """Heart Attack Prediction App"""
@@ -52,7 +69,12 @@ def main():
             st.warning("Passwords do not match")
 
         if st.button("Submit"):
-            pass 
+            create_usertable()
+            hashed_new_password = generate_hashes(new_password)
+            add_userdata(new_username,hashed_new_password)
+            st.success("You have successfully created a new account")
+            st.info("Login to get started")
+
 
 
 
