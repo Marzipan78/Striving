@@ -13,7 +13,7 @@ import matplotlib
 matplotlib.use("Agg")
 
 #DB
-from the_db import *
+from managed_db import *
 
 #Password
 def generate_hashes(password):
@@ -43,6 +43,9 @@ def main():
         username = st.sidebar.text_input("Username")
         password = st.sidebar.text_input("Password",type = "password")
         if st.sidebar.checkbox("Login"):
+            create_usertable()
+            hashed_pswd = generate_hashes(password)
+            result = login_user(username,verify_hashes(password,hashed_pswd))
             if password == "12345":
                 st.success("Welcome {}".format(username))
 
