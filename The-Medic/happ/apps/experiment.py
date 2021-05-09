@@ -74,3 +74,14 @@ def app():
                 ('num', num_4_tree, num_vars),
                 ('cat', cat_4_tree, cat_vars),
             ], remainder='drop')
+    
+    col1, col2, col3  = st.beta_columns(3)
+
+    with col1 : 
+        st.header("P1")
+    
+    with col2 : 
+        st.header("P2")
+    
+    with col3 : 
+        st.header("P3")

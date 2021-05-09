@@ -147,3 +147,15 @@ def app():
         clear_output(wait=True)
     st.write(results_ord.style.bar(subset=['Accuracy', 'Bal Acc.'], vmin=0, vmax=100, color='#5fba7d'))
 
+    st.write( " We opt for the best performing model i.e. SVM_rf. We subject it to augemented data that was not used in the training data before and compare the accuracy. ")
+    
+
+    df_test = pd.read_csv("test.csv")
+    x_test = df_test.drop(['Unnamed: 0','target'],axis= 1)
+
+    best_model = models_wfe["SVM_rbf"]
+    best_model.fit(x_wfe,y_wfe)
+    test_pred = best_model.predict(x_test)
+    sub = pd.DataFrame(test_pred, index=x_test.index, columns=["Target"])
+    acc_score =metrics.accuracy_score(df_test['target'], test_pred)
+    st.info(f"Accuracy: {acc_score * 100}%")
