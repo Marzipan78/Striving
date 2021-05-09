@@ -46,7 +46,8 @@ def main():
             create_usertable()
             hashed_pswd = generate_hashes(password)
             result = login_user(username,verify_hashes(password,hashed_pswd))
-            if password == "12345":
+            #if password == "12345":
+            if result:
                 st.success("Welcome {}".format(username))
 
                 activity = st.selectbox("Activity",submenu)
