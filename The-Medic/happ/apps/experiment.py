@@ -78,10 +78,10 @@ def app():
     col1, col2, col3  = st.beta_columns(3)
 
     with col1 : 
-        st.header("P1")
+        st.info("P1")
     
     with col2 : 
-        st.header("P2")
+        st.info("P2")
     
     with col3 : 
-        st.header("P3")
+        st.info("P3")
