@@ -7,7 +7,7 @@ import seaborn  as sb
 import matplotlib.pyplot as plt
 import sklearn  as skl
 from IPython import display
-import pprint
+
 
 from sklearn import pipeline      # Pipeline
 from sklearn import preprocessing # OrdinalEncoder, LabelEncoder
@@ -39,17 +39,17 @@ from sklearn.ensemble      import AdaBoostClassifier
 from sklearn.ensemble      import GradientBoostingClassifier
 from sklearn.experimental  import enable_hist_gradient_boosting # Necesary for HistGradientBoostingClassifier
 from sklearn.ensemble      import HistGradientBoostingClassifier
-#from xgboost               import XGBClassifier
-#from lightgbm              import LGBMClassifier
+from xgboost               import XGBClassifier
+from lightgbm              import LGBMClassifier
 #from catboost              import CatBoostClassifier
 
 def app():
     
-    st.title('Model')
+    st.title('Models')
 
     st.write('Welcome, this is where the Medical Magic happens.')
 
-    st.write('The model performance of the Sample dataset is presented below.')
+    st.write('The performances of different models on the Sample dataset is presented below.')
 
     # Load dataset
     full_df = pd.read_csv('augheart.csv')

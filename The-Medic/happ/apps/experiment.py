@@ -1,10 +1,15 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from pandas_profiling import ProfileReport
-from streamlit_pandas_profiling import st_profile_report
 from sklearn.model_selection import train_test_split
-
+from sklearn import pipeline      # Pipeline
+from sklearn import preprocessing # OrdinalEncoder, LabelEncoder
+from sklearn import impute
+from sklearn import compose
+from sklearn import model_selection # train_test_split
+from sklearn import metrics         # accuracy_score, balanced_accuracy_score, plot_confusion_matrix
+from sklearn import set_config
+set_config(display='diagram') 
 
 def app():
     st.title('Try our Model with your own data') 
@@ -49,12 +54,11 @@ def app():
                 
                 return a
             df = load_data()
-            #pr = ProfileReport(df, explorative=True)
+            
             st.header('**Input DataFrame**')
             st.write(df)
             st.write('---')
-            #st.header('**Pandas Profiling Report**')
-            #st_profile_report(pr)
+            
             cat_vars  = ['sex','cp','fbs','restecg','exang','slope','ca','thal']
             num_vars  = ['age', 'trestbps', 'chol', 'thalach', 'oldpeak']
 
@@ -63,7 +67,7 @@ def app():
 
             cat_4_tree = pipeline.Pipeline(steps=[
                 ('imputer', impute.SimpleImputer(strategy='constant',)),
-                #('onehot', preprocessing.OneHotEncoder(handle_unknown='ignore'))
+                
             ])
 
             tree_prepro = compose.ColumnTransformer(transformers=[
