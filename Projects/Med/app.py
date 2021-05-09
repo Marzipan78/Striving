@@ -74,7 +74,7 @@ def main():
         if st.button("Submit"):
             create_usertable()
             hashed_new_password = generate_hashes(new_password)
-            add_userdata(new_username,hashed_new_password)
+            add_userdata(new_username, hashed_new_password)
             st.success("You have successfully created a new account")
             st.info("Login to get started")
 
