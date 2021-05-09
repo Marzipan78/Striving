@@ -46,16 +46,23 @@ def main():
             create_usertable()
             hashed_pswd = generate_hashes(password)
             result = login_user(username,verify_hashes(password,hashed_pswd))
-            #if password == "12345":
+            
             if result:
                 st.success("Welcome {}".format(username))
 
                 activity = st.selectbox("Activity",submenu)
                 if activity == "Plot":
                     st.subheader("Data Viz plot")
+                    df = pd.read_csv("data/augheart.csv")
+                    df.drop("Unnamed: 0",axis=1, inplace=True)
+                    st.dataframe(df)
+
+                    df['target'].value_counts().plot(kind = 'bar')
+                    st.pyplot()
 
                 elif activity == "Prediction":
                     st.subheader("Predictive Analysis")
+                    
 
 
             else:
