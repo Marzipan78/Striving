@@ -1,4 +1,3 @@
-import numpy as np
 
 def merge_sort(arr):
     if len(arr) > 1:
@@ -9,11 +8,11 @@ def merge_sort(arr):
         merge_sort(right_arr)
 
         #merge
-        i=0
-        j=0
-
+        i = 0
+        j = 0
+        k = 0
         while i < len(left_arr) and j < len(right_arr):    
-            if left_arr[i]  < right_arr[j]:
+            if left_arr[i]  < right_arr[j]: 
                 arr[k] = left_arr[i]
                 i += 1
                 
@@ -32,4 +31,6 @@ def merge_sort(arr):
             arr[k] = right_arr[j]
             j += 1
             k += 1
- 
+
+arr_test = [2,4,5,7,1,9,31,35,15,6,36,13,5,0]
+merge_sort(arr = arr_test) 
