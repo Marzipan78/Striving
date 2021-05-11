@@ -21,3 +21,15 @@ def merge_sort(arr):
                 arr[k] = right_arr[j]
                 j += 1 
             k += 1
+
+
+        while i < len(left_arr):
+            arr[k] = left_arr[i]
+            i += 1
+            k += 1
+
+        while j < len(right_arr):
+            arr[k] = right_arr[j]
+            j += 1
+            k += 1
+ 
