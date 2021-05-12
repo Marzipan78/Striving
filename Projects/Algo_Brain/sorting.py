@@ -32,7 +32,7 @@ def merge_sort(arr):
             arr[k] = r_arr[j]
             j += 1
             k += 1
-#import numpy as np
+import numpy as np
 #np.random.seed(0)
 #big_list = np.random.permutation(100)
 
