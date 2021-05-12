@@ -1,34 +1,36 @@
 
 def merge_sort(arr):
-    if len(arr) > 1:
-        left_arr = arr[:len(arr)//2]
-        right_arr = arr[len(arr)//2:]
+    '''merge sort splits the array into two and further breaks it and then joins it later'''
 
-        merge_sort(left_arr)
-        merge_sort(right_arr)
+    if len(arr) > 1:
+        l_arr = arr[:len(arr)//2]
+        r_arr = arr[len(arr)//2:]
+
+        merge_sort(l_arr)
+        merge_sort(r_arr)
 
         #merge
         i = 0
         j = 0
         k = 0
-        while i < len(left_arr) and j < len(right_arr):    
-            if left_arr[i]  < right_arr[j]: 
-                arr[k] = left_arr[i]
+        while i < len(l_arr) and j < len(r_arr):    
+            if l_arr[i]  < r_arr[j]: 
+                arr[k] = l_arr[i]
                 i += 1
                 
             else:
-                arr[k] = right_arr[j]
+                arr[k] = r_arr[j]
                 j += 1 
             k += 1
 
 
-        while i < len(left_arr):
-            arr[k] = left_arr[i]
+        while i < len(l_arr):
+            arr[k] = l_arr[i]
             i += 1
             k += 1
 
-        while j < len(right_arr):
-            arr[k] = right_arr[j]
+        while j < len(r_arr):
+            arr[k] = r_arr[j]
             j += 1
             k += 1
 
