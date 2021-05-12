@@ -6,5 +6,10 @@ class DataShredder():
     def terrorize(self):
         print("Good-day WEAKLINGS, it is I, self.name")
 
-j = DataShredder('Jon')
-j.terrorize()
+class Asswhoop(DataShredder):
+    def slogan(self):
+        print(f"{self.name} , you donnies are my slaves!"  )
+
+class Immer_Asswhoop(DataShredder):
+    def slogan(self):
+        print(f"{self.name} ,you donnies are and will always be my slaves! Bring my pancakes"  )
