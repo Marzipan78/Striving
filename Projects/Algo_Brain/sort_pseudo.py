@@ -11,4 +11,6 @@ def merge(A,p,q,r):
     l = 0
     l1 = 0 
 
-    f
+    for i in n1:
+        l[i] = A[p + i - 1]
+        
