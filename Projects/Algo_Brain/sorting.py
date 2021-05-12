@@ -1,4 +1,3 @@
-
 def merge_sort(arr):
     '''merge sort splits the array into two and further breaks it and then joins it later'''
 
@@ -33,7 +32,13 @@ def merge_sort(arr):
             arr[k] = r_arr[j]
             j += 1
             k += 1
+#import numpy as np
+#np.random.seed(0)
+#big_list = np.random.permutation(100)
 
 arr_test = [2,4,5,7,1,9,31,35,15,6,36,13,5,0]
-merge_sort(arr_test)
-print(arr_test)
+#merge_sort(big_list)
+#print(big_list)
+
+import os
+os.environ['PATH']
