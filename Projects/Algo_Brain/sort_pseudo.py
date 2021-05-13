@@ -17,4 +17,11 @@ def merge(A,p,q,r):
 
     for j in range(1,len(n2)):
         R[j] = A[q + j]
+
+    for i  in  range(1,len(n1)):
+        l[i] = A[p + i - 1 ]
+
+    for j in range(1,len(n2)):
+        R[j] = A[q + j]
+        
         
