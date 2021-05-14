@@ -115,8 +115,9 @@ def main():
             # Pipeline for Tree models
 
             cat_4_treeModels = pipeline.Pipeline(steps=[  
-            ('ordinal', preprocessing.OrdinalEncoder(categories='auto', handle_unknown='use_encoded_value', unknown_value=-99))
+            ('ordinal', preprocessing.OrdinalEncoder(categories='auto',handle_unknown="ignore"))
             ])
+            #handle_unknown='use_encoded_value',
 
             tree_prepro = compose.ColumnTransformer(transformers=[
                 ('cat_t', cat_4_treeModels, cat_vars),
@@ -149,7 +150,7 @@ def main():
             "Skl HistGBM": HistGradientBoostingClassifier(random_state=0),
             "XGBoost": XGBClassifier(random_state=0),
             "LightGBM": LGBMClassifier(random_state=0),
-            "CatBoost":CatBoostClassifier(random_state=0),
+            #"CatBoost":CatBoostClassifier(random_state=0),
             }
 
             mult_regressors = {
