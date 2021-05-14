@@ -114,16 +114,17 @@ def main():
 
             # Pipeline for Tree models
 
-            cat_4_treeModels = pipeline.Pipeline(steps=[  
-            ('ordinal', preprocessing.OrdinalEncoder(categories='auto',handle_unknown="ignore"))
+            
+            """cat_4_treeModels = pipeline.Pipeline(steps=[  
+            ('ordinal', preprocessing.OrdinalEncoder(categories='auto', handle_unknown='use_encoded_value', unknown_value=-99))
             ])
-            #handle_unknown='use_encoded_value',
 
             tree_prepro = compose.ColumnTransformer(transformers=[
                 ('cat_t', cat_4_treeModels, cat_vars),
             ], remainder='drop') # Drop other vars not specified in num_vars or cat_vars
 
-            tree_prepro
+            tree_prepro"""
+            
 
             # Pipeline for Mult models
 
@@ -160,7 +161,7 @@ def main():
             }
 
 
-            tree_regressors = {name: pipeline.make_pipeline(tree_prepro, model) for name, model in tree_regressors.items()}
+            tree_regressors = {name: pipeline.make_pipeline( model) for name, model in tree_regressors.items()}
 
             mult_regressors = {name: pipeline.make_pipeline(mult_prepro, model) for name, model in mult_regressors.items()}
 
