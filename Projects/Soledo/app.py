@@ -36,7 +36,7 @@ def main():
     
     elif choice == "Data":
 
-        st.success("Welcome aboard you Curious Cat}")
+        st.success("Welcome Aboard You Curious Cat")
         activity = st.selectbox("Activity",submenu)
         if activity == "Analysis":
             st.subheader("Data Viz plot")
