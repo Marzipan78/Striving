@@ -68,6 +68,7 @@ def main():
         st.markdown(" On the surface we look like any other onlin shopping platform however we implement state of the art Data Analysis and Predictive model. We utilize this in order to identify Sales and to identify trends prior to them actually happening!")
         st.markdown(" We are a powerhouse in Turkey and we would like to help you to help us to make a global impact. Expand into various ventures as our Model: Magic-Ball is very versatile.")
 
+        
     
     elif choice == "Data":
 
@@ -89,6 +90,8 @@ def main():
             st.markdown("Just pulling your leg!As informative these graphs, there are not very intuitive. I would have to come up with code every other time to make a decision. Our partner Graphext has us covered.")
             st.markdown("We are using the state of the Art indepth Analysis in order to Identify key trends over our time in Turkey, we plan to implement the same for every market we enter into. The POWER OF DATA!")
             # INSERT LINK 
+            link = '[Deep-Insight](https://public.graphext.com/889ca3f52441c367/index.html?section=insights&id=)'
+            st.markdown(link, unsafe_allow_html=True)
 
         elif activity == "Magic-Ball":
             st.subheader("The Magic")
