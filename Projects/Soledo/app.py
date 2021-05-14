@@ -75,6 +75,7 @@ def main():
         activity = st.selectbox("Activity",submenu)
         if activity == "Analysis":
             st.subheader("Data Viz plot")
+            df = pd.read_csv("online_shoppers_intention.csv")
             
             #st.dataframe(df)
 
@@ -89,86 +90,115 @@ def main():
             st.markdown("We are using the state of the Art indepth Analysis in order to Identify key trends over our time in Turkey, we plan to implement the same for every market we enter into. The POWER OF DATA!")
             # INSERT LINK 
 
-    elif activity == "Magic-Ball":
-        st.subheader("The Magic")
-        df = pd.read_csv("online_shoppers_intention.csv")
-        df['VisitorType'] = df['VisitorType'].map({'Other': 0, 'New_Visitor': 1, 'Returning_Visitor': 2})
+        elif activity == "Magic-Ball":
+            st.subheader("The Magic")
+            df = pd.read_csv("online_shoppers_intention.csv")
+            df['VisitorType'] = df['VisitorType'].map({'Other': 0, 'New_Visitor': 1, 'Returning_Visitor': 2})
 
-        df['Month'] = df['Month'].map({'Jan': 1, 'Feb': 2, 'Mar': 3, 'Apr': 4, 'May': 5, 'June': 6, 'Jul': 7, 'Aug': 8, 'Sep': 9, 'Oct': 10, 'Nov': 11, 'Dec': 12})
+            df['Month'] = df['Month'].map({'Jan': 1, 'Feb': 2, 'Mar': 3, 'Apr': 4, 'May': 5, 'June': 6, 'Jul': 7, 'Aug': 8, 'Sep': 9, 'Oct': 10, 'Nov': 11, 'Dec': 12})
 
-        df['SpecialDay'] = df['SpecialDay'] * 10
+            df['SpecialDay'] = df['SpecialDay'] * 10
 
-        df['SpecialDay'] = df['SpecialDay'].astype(int)
+            df['SpecialDay'] = df['SpecialDay'].astype(int)
 
-        df['Month'] = df['Month'].astype(int)
+            df['Month'] = df['Month'].astype(int)
 
-        df['Weekend'] = df['Weekend'].astype(int)
+            df['Weekend'] = df['Weekend'].astype(int)
 
-        df['Revenue'] = df['Revenue'].astype(int)
+            df['Revenue'] = df['Revenue'].astype(int)
 
-        cat_vars = ['Administrative', 'Informational', 'ProductRelated', 'Month', 'VisitorType', 'SpecialDay']
+            cat_vars = ['Administrative', 'Informational', 'ProductRelated', 'Month', 'VisitorType', 'SpecialDay']
 
-        num_vars = ['PageValues', 'ExitRates', 'ProductRelated_Duration', 'BounceRates', 'Administrative_Duration']
-
-
-        # Pipeline for Tree models
-
-        cat_4_treeModels = pipeline.Pipeline(steps=[  
-        ('ordinal', preprocessing.OrdinalEncoder(categories='auto', handle_unknown='use_encoded_value', unknown_value=-99))
-        ])
-
-        tree_prepro = compose.ColumnTransformer(transformers=[
-            ('cat_t', cat_4_treeModels, cat_vars),
-        ], remainder='drop') # Drop other vars not specified in num_vars or cat_vars
-
-        tree_prepro
-
-        # Pipeline for Mult models
-
-        num_4_multModels = pipeline.Pipeline(steps=[
-        ('quant', preprocessing.QuantileTransformer(output_distribution='normal', random_state=73)),
-        ])
-
-        cat_4_multModels = pipeline.Pipeline(steps=[
-        ('onehot', preprocessing.OneHotEncoder(categories='auto', handle_unknown='ignore')),
-        ])
-
-        mult_prepro = compose.ColumnTransformer(transformers=[
-            ('num_m', num_4_multModels, num_vars),
-            ('cat_m', cat_4_multModels, cat_vars),
-        ], remainder='drop') # Drop other vars not specified in num_vars or cat_vars
-
-        mult_prepro
-
-        tree_regressors = {
-        "Extra Trees": ExtraTreesClassifier(random_state=0),
-        "Random Forest": RandomForestClassifier(random_state=0),
-        "AdaBoost": AdaBoostClassifier(random_state=0),
-        "Skl GBM": GradientBoostingClassifier(random_state=0),
-        "Skl HistGBM": HistGradientBoostingClassifier(random_state=0),
-        "XGBoost": XGBClassifier(random_state=0),
-        "LightGBM": LGBMClassifier(random_state=0),
-        "CatBoost":CatBoostClassifier(random_state=0),
-        }
-
-        mult_regressors = {
-        "SVC": SVC(random_state=0),
-        "KNN": KNeighborsClassifier(),
-        "Logistic": LogisticRegression(random_state=0)
-        }
+            num_vars = ['PageValues', 'ExitRates', 'ProductRelated_Duration', 'BounceRates', 'Administrative_Duration']
 
 
-        tree_regressors = {name: pipeline.make_pipeline(tree_prepro, model) for name, model in tree_regressors.items()}
+            # Pipeline for Tree models
 
-        mult_regressors = {name: pipeline.make_pipeline(mult_prepro, model) for name, model in mult_regressors.items()}
+            cat_4_treeModels = pipeline.Pipeline(steps=[  
+            ('ordinal', preprocessing.OrdinalEncoder(categories='auto', handle_unknown='use_encoded_value', unknown_value=-99))
+            ])
 
-        all_pipelines = {**tree_regressors, **mult_regressors}
+            tree_prepro = compose.ColumnTransformer(transformers=[
+                ('cat_t', cat_4_treeModels, cat_vars),
+            ], remainder='drop') # Drop other vars not specified in num_vars or cat_vars
 
-        # Defining X and y
+            tree_prepro
 
-        X = df[cat_vars + num_vars]
+            # Pipeline for Mult models
 
-        y = df['Revenue']
+            num_4_multModels = pipeline.Pipeline(steps=[
+            ('quant', preprocessing.QuantileTransformer(output_distribution='normal', random_state=73)),
+            ])
+
+            cat_4_multModels = pipeline.Pipeline(steps=[
+            ('onehot', preprocessing.OneHotEncoder(categories='auto', handle_unknown='ignore')),
+            ])
+
+            mult_prepro = compose.ColumnTransformer(transformers=[
+                ('num_m', num_4_multModels, num_vars),
+                ('cat_m', cat_4_multModels, cat_vars),
+            ], remainder='drop') # Drop other vars not specified in num_vars or cat_vars
+
+            mult_prepro
+
+            tree_regressors = {
+            "Extra Trees": ExtraTreesClassifier(random_state=0),
+            "Random Forest": RandomForestClassifier(random_state=0),
+            "AdaBoost": AdaBoostClassifier(random_state=0),
+            "Skl GBM": GradientBoostingClassifier(random_state=0),
+            "Skl HistGBM": HistGradientBoostingClassifier(random_state=0),
+            "XGBoost": XGBClassifier(random_state=0),
+            "LightGBM": LGBMClassifier(random_state=0),
+            "CatBoost":CatBoostClassifier(random_state=0),
+            }
+
+            mult_regressors = {
+            "SVC": SVC(random_state=0),
+            "KNN": KNeighborsClassifier(),
+            "Logistic": LogisticRegression(random_state=0)
+            }
+
+
+            tree_regressors = {name: pipeline.make_pipeline(tree_prepro, model) for name, model in tree_regressors.items()}
+
+            mult_regressors = {name: pipeline.make_pipeline(mult_prepro, model) for name, model in mult_regressors.items()}
+
+            all_pipelines = {**tree_regressors, **mult_regressors}
+
+            # Defining X and y
+
+            X = df[cat_vars + num_vars]
+
+            y = df['Revenue']
+            # Applying KFold
+            from sklearn.model_selection import cross_val_predict
+            skf = model_selection.StratifiedKFold(
+                n_splits=10,
+                shuffle=True,
+                random_state=73
+            )
+
+            results = pd.DataFrame({'Model': [], 'Accuracy': [], 'Bal Acc.': [], 'Time': []})
+
+            for model_name, pipe in all_pipelines.items():
+
+                start_time = time.time()
+                preds = 0
+                # YOUR CODE HERE
+
+                preds = cross_val_predict(pipe, X, y, cv=skf, n_jobs=-1)
+
+                total_time = time.time() - start_time
+
+                results = results.append({"Model":    model_name,
+                                        "Accuracy": metrics.accuracy_score(y, preds)*100,
+                                        "Bal Acc.": metrics.balanced_accuracy_score(y, preds)*100,
+                                        "Time":     total_time},
+                                        ignore_index=True)
+
+            results_ord = results.sort_values(by=['Accuracy'], ascending=False, ignore_index=True)
+            results_ord.index += 1 
+            results_ord.style.bar(subset=['Accuracy', 'Bal Acc.'], vmin=0, vmax=100, color='#5fba7d')
 
 
 
