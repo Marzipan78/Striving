@@ -87,7 +87,7 @@ def main():
             df.corr()['Revenue'].abs().sort_values().plot.barh()
             st.pyplot()
 
-            st.markdown("Just pulling your leg!As informative these graphs, there are not very intuitive. I would have to come up with code every other time to make a decision. Our partner Graphext has us covered.")
+            st.markdown("Just pulling your leg! As informative these graphs, there are not very intuitive. I would have to come up with code every other time to make a decision. Our partner Graphext has us covered.")
             st.markdown("We are using the state of the Art indepth Analysis in order to Identify key trends over our time in Turkey, we plan to implement the same for every market we enter into. The POWER OF DATA!")
             # INSERT LINK 
             link = '[Deep-Insight](https://public.graphext.com/889ca3f52441c367/index.html?section=insights&id=)'
@@ -114,97 +114,29 @@ def main():
 
             num_vars = ['PageValues', 'ExitRates', 'ProductRelated_Duration', 'BounceRates', 'Administrative_Duration']
 
-
-            # Pipeline for Tree models
-
-            
-            """cat_4_treeModels = pipeline.Pipeline(steps=[  
-            ('ordinal', preprocessing.OrdinalEncoder(categories='auto', handle_unknown='use_encoded_value', unknown_value=-99))
-            ])
-
-            tree_prepro = compose.ColumnTransformer(transformers=[
-                ('cat_t', cat_4_treeModels, cat_vars),
-            ], remainder='drop') # Drop other vars not specified in num_vars or cat_vars
-
-            tree_prepro"""
-            
-
-            # Pipeline for Mult models
-
-            num_4_multModels = pipeline.Pipeline(steps=[
-            ('quant', preprocessing.QuantileTransformer(output_distribution='normal', random_state=73)),
-            ])
-
-            cat_4_multModels = pipeline.Pipeline(steps=[
-            ('onehot', preprocessing.OneHotEncoder(categories='auto', handle_unknown='ignore')),
-            ])
-
-            mult_prepro = compose.ColumnTransformer(transformers=[
-                ('num_m', num_4_multModels, num_vars),
-                ('cat_m', cat_4_multModels, cat_vars),
-            ], remainder='drop') # Drop other vars not specified in num_vars or cat_vars
-
-            mult_prepro
-
-            tree_regressors = {
-            "Extra Trees": ExtraTreesClassifier(random_state=0),
-            "Random Forest": RandomForestClassifier(random_state=0),
-            "AdaBoost": AdaBoostClassifier(random_state=0),
-            "Skl GBM": GradientBoostingClassifier(random_state=0),
-            "Skl HistGBM": HistGradientBoostingClassifier(random_state=0),
-            "XGBoost": XGBClassifier(random_state=0),
-            "LightGBM": LGBMClassifier(random_state=0),
-            #"CatBoost":CatBoostClassifier(random_state=0),
-            }
-
-            mult_regressors = {
-            "SVC": SVC(random_state=0),
-            "KNN": KNeighborsClassifier(),
-            "Logistic": LogisticRegression(random_state=0)
-            }
-
-
-            tree_regressors = {name: pipeline.make_pipeline( model) for name, model in tree_regressors.items()}
-
-            mult_regressors = {name: pipeline.make_pipeline(mult_prepro, model) for name, model in mult_regressors.items()}
-
-            all_pipelines = {**tree_regressors, **mult_regressors}
-
-            # Defining X and y
-
             X = df[cat_vars + num_vars]
 
             y = df['Revenue']
-            # Applying KFold
-            from sklearn.model_selection import cross_val_predict
-            skf = model_selection.StratifiedKFold(
-                n_splits=10,
-                shuffle=True,
-                random_state=73
-            )
-
-            results = pd.DataFrame({'Model': [], 'Accuracy': [], 'Bal Acc.': [], 'Time': []})
-
-            for model_name, pipe in all_pipelines.items():
-
-                start_time = time.time()
-                preds = 0
-                # YOUR CODE HERE
-
-                preds = cross_val_predict(pipe, X, y, cv=skf, n_jobs=-1)
-
-                total_time = time.time() - start_time
-
-                results = results.append({"Model":    model_name,
-                                        "Accuracy": metrics.accuracy_score(y, preds)*100,
-                                        "Bal Acc.": metrics.balanced_accuracy_score(y, preds)*100,
-                                        "Time":     total_time},
-                                        ignore_index=True)
-
-            results_ord = results.sort_values(by=['Accuracy'], ascending=False, ignore_index=True)
-            results_ord.index += 1 
-            results_ord.style.bar(subset=['Accuracy', 'Bal Acc.'], vmin=0, vmax=100, color='#5fba7d')
-
+           
+            from numpy import mean
+            from numpy import std
+            from sklearn.datasets import make_classification
+            from sklearn.model_selection import cross_val_score
+            from sklearn.model_selection import RepeatedStratifiedKFold
+            from sklearn.feature_selection import RFECV
+            from sklearn.tree import DecisionTreeClassifier
+            from sklearn.pipeline import Pipeline
+            # define dataset
+            # create pipeline
+            rfe = RFECV(estimator=DecisionTreeClassifier())
+            model = DecisionTreeClassifier()
+            pipeline = Pipeline(steps=[('s',rfe),('m',model)])
+            # evaluate model
+            cv = RepeatedStratifiedKFold(n_splits=10, n_repeats=3, random_state=1)
+            n_scores = cross_val_score(pipeline, X, y, scoring='accuracy', cv=cv, n_jobs=-1, error_score='raise')
+            # report performance
+            st.write('Accuracy: %.3f (%.3f)' % (mean(n_scores), std(n_scores)))
+            
 
 
 
