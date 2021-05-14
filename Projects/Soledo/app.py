@@ -140,7 +140,35 @@ def main():
 
         mult_prepro
 
-        
+        tree_regressors = {
+        "Extra Trees": ExtraTreesClassifier(random_state=0),
+        "Random Forest": RandomForestClassifier(random_state=0),
+        "AdaBoost": AdaBoostClassifier(random_state=0),
+        "Skl GBM": GradientBoostingClassifier(random_state=0),
+        "Skl HistGBM": HistGradientBoostingClassifier(random_state=0),
+        "XGBoost": XGBClassifier(random_state=0),
+        "LightGBM": LGBMClassifier(random_state=0),
+        "CatBoost":CatBoostClassifier(random_state=0),
+        }
+
+        mult_regressors = {
+        "SVC": SVC(random_state=0),
+        "KNN": KNeighborsClassifier(),
+        "Logistic": LogisticRegression(random_state=0)
+        }
+
+
+        tree_regressors = {name: pipeline.make_pipeline(tree_prepro, model) for name, model in tree_regressors.items()}
+
+        mult_regressors = {name: pipeline.make_pipeline(mult_prepro, model) for name, model in mult_regressors.items()}
+
+        all_pipelines = {**tree_regressors, **mult_regressors}
+
+        # Defining X and y
+
+        X = df[cat_vars + num_vars]
+
+        y = df['Revenue']
 
 
 
