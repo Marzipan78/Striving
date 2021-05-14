@@ -10,8 +10,43 @@ import emoji
 #Dataviz
 import matplotlib.pyplot as plt 
 import matplotlib
+import seaborn as sns
 matplotlib.use("Agg")
 from PIL import Image
+
+## DS
+import time
+from IPython.display import display, clear_output
+
+import sklearn
+from sklearn import pipeline      # Pipeline
+from sklearn import preprocessing # OrdinalEncoder, LabelEncoder
+from sklearn import impute
+from sklearn import compose
+from sklearn import model_selection # train_test_split
+from sklearn import metrics         # accuracy_score, balanced_accuracy_score, plot_confusion_matrix
+from sklearn import set_config
+
+set_config(display='diagram') # Useful for display the pipeline
+
+# Tree models
+from sklearn.ensemble       import RandomForestClassifier
+from sklearn.ensemble       import ExtraTreesClassifier
+from sklearn.ensemble       import AdaBoostClassifier
+from sklearn.ensemble       import GradientBoostingClassifier
+from sklearn.experimental   import enable_hist_gradient_boosting # Necesary for HistGradientBoostingClassifier
+from sklearn.ensemble       import HistGradientBoostingClassifier
+from xgboost                import XGBClassifier
+from lightgbm               import LGBMClassifier
+#from catboost               import CatBoostClassifier
+
+# Multiplicative models
+from sklearn.svm            import SVC
+from sklearn.neighbors      import KNeighborsClassifier
+from sklearn.linear_model   import LogisticRegression
+
+
+
 
 
 def main():
@@ -40,17 +75,72 @@ def main():
         activity = st.selectbox("Activity",submenu)
         if activity == "Analysis":
             st.subheader("Data Viz plot")
-            df = pd.read_csv("online_shoppers_intention.csv")
+            
             #st.dataframe(df)
 
             st.set_option('deprecation.showPyplotGlobalUse', False)
             df['Revenue'].value_counts().plot(kind = 'bar')
             st.pyplot()
 
-            
+            df.corr()['Revenue'].abs().sort_values().plot.barh()
+            st.pyplot()
+
+            st.markdown("Just pulling your leg!As informative these graphs, there are not very intuitive. I would have to come up with code every other time to make a decision. Our partner Graphext has us covered.")
+            st.markdown("We are using the state of the Art indepth Analysis in order to Identify key trends over our time in Turkey, we plan to implement the same for every market we enter into. The POWER OF DATA!")
+            # INSERT LINK 
+
+    elif activity == "Magic-Ball":
+        st.subheader("The Magic")
+        df = pd.read_csv("online_shoppers_intention.csv")
+        df['VisitorType'] = df['VisitorType'].map({'Other': 0, 'New_Visitor': 1, 'Returning_Visitor': 2})
+
+        df['Month'] = df['Month'].map({'Jan': 1, 'Feb': 2, 'Mar': 3, 'Apr': 4, 'May': 5, 'June': 6, 'Jul': 7, 'Aug': 8, 'Sep': 9, 'Oct': 10, 'Nov': 11, 'Dec': 12})
+
+        df['SpecialDay'] = df['SpecialDay'] * 10
+
+        df['SpecialDay'] = df['SpecialDay'].astype(int)
+
+        df['Month'] = df['Month'].astype(int)
+
+        df['Weekend'] = df['Weekend'].astype(int)
+
+        df['Revenue'] = df['Revenue'].astype(int)
+
+        cat_vars = ['Administrative', 'Informational', 'ProductRelated', 'Month', 'VisitorType', 'SpecialDay']
+
+        num_vars = ['PageValues', 'ExitRates', 'ProductRelated_Duration', 'BounceRates', 'Administrative_Duration']
 
 
+        # Pipeline for Tree models
 
+        cat_4_treeModels = pipeline.Pipeline(steps=[  
+        ('ordinal', preprocessing.OrdinalEncoder(categories='auto', handle_unknown='use_encoded_value', unknown_value=-99))
+        ])
+
+        tree_prepro = compose.ColumnTransformer(transformers=[
+            ('cat_t', cat_4_treeModels, cat_vars),
+        ], remainder='drop') # Drop other vars not specified in num_vars or cat_vars
+
+        tree_prepro
+
+        # Pipeline for Mult models
+
+        num_4_multModels = pipeline.Pipeline(steps=[
+        ('quant', preprocessing.QuantileTransformer(output_distribution='normal', random_state=73)),
+        ])
+
+        cat_4_multModels = pipeline.Pipeline(steps=[
+        ('onehot', preprocessing.OneHotEncoder(categories='auto', handle_unknown='ignore')),
+        ])
+
+        mult_prepro = compose.ColumnTransformer(transformers=[
+            ('num_m', num_4_multModels, num_vars),
+            ('cat_m', cat_4_multModels, cat_vars),
+        ], remainder='drop') # Drop other vars not specified in num_vars or cat_vars
+
+        mult_prepro
+
+        
 
 
 
