@@ -41,8 +41,13 @@ def main():
         if activity == "Analysis":
             st.subheader("Data Viz plot")
             df = pd.read_csv("online_shoppers_intention.csv")
-            st.dataframe(df)
+            #st.dataframe(df)
 
+            st.set_option('deprecation.showPyplotGlobalUse', False)
+            df['Revenue'].value_counts().plot(kind = 'bar')
+            st.pyplot()
+
+            
 
 
 
