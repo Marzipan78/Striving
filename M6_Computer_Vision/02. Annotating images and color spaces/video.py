@@ -2,23 +2,32 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-cap = cv2.VideoCapture(0)
-if not cap.isOpened():
-    print("Cannot open camera")
-    exit()
-while True:
-    # Capture frame-by-frame
-    ret, frame = cap.read()
-    # if frame is read correctly ret is True
-    if not ret:
-        print("Can't receive frame (stream end?). Exiting ...")
+video = cv2.VideoCapture(0)
+g_l_range = (40, 50, 20)
+g_u_range = (80, 255, 255)
+b_l_range = (95, 50, 20)
+b_u_range = (145, 255, 255)
+while(video.isOpened()):
+    check, frame = video.read()
+    if frame is not None:
+        img = frame
+        hsv_img = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+        
+        #mask1 = cv2.inRange(hsv_img,b_l_range,b_u_range)
+        maskg = cv2.inRange(hsv_img,g_l_range,g_u_range)
+        
+        img_copy = img.copy()
+
+        #img_copy[mask1 == 0] = [0,0,0]
+        img_copy[maskg == 0] = [0,0,0]
+
+        cv2.imshow('frame',frame)        
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+    else:
         break
-    # Our operations on the frame come here
-    
-    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    # Display the resulting frame
-    cv2.imshow('frame', gray)
-    if cv2.waitKey(1) == ord('j'):
-        break
-cap.release()
+
+
+video.release()
+
 cv2.destroyAllWindows()
