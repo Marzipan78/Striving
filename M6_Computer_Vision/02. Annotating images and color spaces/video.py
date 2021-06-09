@@ -13,15 +13,15 @@ while(video.isOpened()):
         img = frame
         hsv_img = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
         
-        #mask1 = cv2.inRange(hsv_img,b_l_range,b_u_range)
-        maskg = cv2.inRange(hsv_img,g_l_range,g_u_range)
+        mask1 = cv2.inRange(hsv_img,b_l_range,b_u_range)
+        #maskg = cv2.inRange(hsv_img,g_l_range,g_u_range)
         
         img_copy = img.copy()
 
-        #img_copy[mask1 == 0] = [0,0,0]
-        img_copy[maskg == 0] = [0,0,0]
+        img_copy[mask1 == 0] = [0,0,0]
+        #img_copy[maskg == 0] = [0,0,0]
 
-        cv2.imshow('frame',frame)        
+        cv2.imshow('frame',img_copy)        
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
     else:
