@@ -1,6 +1,6 @@
 import cv2
 from collections import OrderedDict
-import pickle
+#import pickle
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -19,26 +19,32 @@ class Tensify():
         
         image = path + img
         number = cv2.imread(image,cv2.IMREAD_GRAYSCALE)
+        
+        
         img = cv2.blur(number, (9, 9))
         _, img = cv2.threshold(img, 175, 255, cv2.THRESH_TRUNC)
         img = cv2.resize(img, (28, 28), interpolation=cv2.INTER_LANCZOS4)
         
         img = cv2.bitwise_not(img)
-        plt.figure(figsize = (10, 10))
+        
+        plt.figure(figsize=(10,10))
+        #fig, (ax1,ax2) = plt.subplots(1,2,fpyigsize = (10, 10))
+        #fig.suptitle("Number")
+        #ax1.imshow(number)
         plt.imshow(img)
         return img 
 
-    #def tensed(number):
-    #    tensed_number = torch.from_numpy(number).float()
-    #    F.normalize(tensed_number)
-    #    flat_number = tensed_number.reshape(-1,784)
-    #    return flat_number
-
-    def cnn_tensed(number):
+    def tensed(number):
         tensed_number = torch.from_numpy(number).float()
         F.normalize(tensed_number)
-        flat_number = tensed_number.reshape(-1,1,28,28)
+        flat_number = tensed_number.reshape(-1,784)
         return flat_number
+
+    #def cnn_tensed(number):
+    #    tensed_number = torch.from_numpy(number).float()
+    #    F.normalize(tensed_number)
+    #    flat_number = tensed_number.reshape(-1,1,28,28)
+    #    return flat_number
 
 
 
