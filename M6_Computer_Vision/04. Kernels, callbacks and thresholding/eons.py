@@ -1,11 +1,10 @@
 import cv2
 from collections import OrderedDict
-
+#import pickle
 
 import numpy as np
 import matplotlib.pyplot as plt
 import time
-
 
 import torch
 from torch import nn
@@ -15,7 +14,7 @@ import torch.nn.functional as F
 from torchvision import datasets, transforms
 
 class Tensify():
-
+    
     def imagify(path,img):
         
         image = path + img
@@ -40,12 +39,3 @@ class Tensify():
         F.normalize(tensed_number)
         flat_number = tensed_number.reshape(-1,784)
         return flat_number
-
-    #def cnn_tensed(number):
-    #    tensed_number = torch.from_numpy(number).float()
-    #    F.normalize(tensed_number)
-    #    flat_number = tensed_number.reshape(-1,1,28,28)
-    #    return flat_number
-
-
-
