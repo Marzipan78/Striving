@@ -34,3 +34,11 @@ class Tensify():
         flat_number = tensed_number.reshape(-1,784)
         return flat_number
 
+    def cnn_tensed(number):
+        tensed_number = torch.from_numpy(number).float()
+        F.normalize(tensed_number)
+        flat_number = tensed_number.reshape(-1,1,28,28)
+        return flat_number
+        
+
+
