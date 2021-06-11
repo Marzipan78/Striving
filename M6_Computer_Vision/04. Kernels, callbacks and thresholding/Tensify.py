@@ -1,5 +1,6 @@
 import cv2
 from collections import OrderedDict
+import pickle
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -32,3 +33,4 @@ class Tensify():
         F.normalize(tensed_number)
         flat_number = tensed_number.reshape(-1,784)
         return flat_number
+
