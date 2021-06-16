@@ -32,6 +32,7 @@ class Tensify():
         #fig, (ax1,ax2) = plt.subplots(1,2,fpyigsize = (10, 10))
         #fig.suptitle("Number")
         #ax1.imshow(number)
+        plt.imshow(number)
         plt.imshow(img)
         return img 
 
