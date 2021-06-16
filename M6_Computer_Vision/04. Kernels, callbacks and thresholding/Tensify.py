@@ -23,7 +23,10 @@ class Tensify():
         return numbers
     
     def rotator(img):
-        
+        rotated_img = cv2.rotate(img,cv2.cv2.ROTATE_90_CLOCKWISE)
+        plt.imshow(rotated_img)
+        return  rotated_img       
+
 
     def imagify(path,img):
         
