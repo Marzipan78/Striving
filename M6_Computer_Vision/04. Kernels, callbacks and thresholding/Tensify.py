@@ -9,6 +9,7 @@ from torch import optim
 import torch.nn.functional as F
 
 from torchvision import datasets, transforms
+from PIL import Image
 
 class Tensify():
 
@@ -18,10 +19,12 @@ class Tensify():
         plt.imshow(numbers)
         return numbers
     
-    def rotator(img):
-        rotated_img = cv2.rotate(img,cv2.cv2.ROTATE_90_CLOCKWISE)
-        plt.imshow(rotated_img)
-        return  rotated_img       
+    # def rotator(img):
+           
+    #     img = Image.open(img)
+    #     rotated_img = img.transpose(Image.ROTATE_270)
+    #     plt.imshow(rotated_img)
+    #     return  rotated_img       
 
 
     def imagify(path,img):
