@@ -28,17 +28,10 @@ class Tensify():
         
         img = cv2.bitwise_not(img)
         
-        # plt.figure(figsize=(5,5))
-        # fig, (ax1,ax2) = plt.subplots(1,2,fpyigsize = (10, 10))
-        # #fig.suptitle("Number")
-        # #ax1.imshow(number)
-        # plt.imshow(number)
-        # plt.imshow(img)
-        return img, number
-    def show_number(orig,imagified):
         fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(8, 4))
-        ax1.imshow(orig);
-        ax2.imshow(imagified);
+        ax1.imshow(number);
+        ax2.imshow(img);
+        return img, number
 
 
     def tensed(number):
