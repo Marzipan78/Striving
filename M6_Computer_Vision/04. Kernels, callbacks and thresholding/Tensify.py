@@ -31,7 +31,7 @@ class Tensify():
         fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(8, 4))
         ax1.imshow(number);
         ax2.imshow(img);
-        return img, number
+        return img
 
 
     def tensed(number):
@@ -40,11 +40,11 @@ class Tensify():
         flat_number = tensed_number.reshape(-1,784)
         return flat_number
 
-    #def cnn_tensed(number):
-    #    tensed_number = torch.from_numpy(number).float()
-    #    F.normalize(tensed_number)
-    #    flat_number = tensed_number.reshape(-1,1,28,28)
-    #    return flat_number
+    def cnn_tensed(number):
+       tensed_number = torch.from_numpy(number).float()
+       F.normalize(tensed_number)
+       cnn_number = tensed_number.reshape(-1,1,28,28)
+       return cnn_number
 
 
 
