@@ -1,12 +1,8 @@
 import cv2
 from collections import OrderedDict
-
-
 import numpy as np
 import matplotlib.pyplot as plt
 import time
-
-
 import torch
 from torch import nn
 from torch import optim
