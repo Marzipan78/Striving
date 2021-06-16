@@ -16,6 +16,15 @@ from torchvision import datasets, transforms
 
 class Tensify():
 
+    def image_reader(path,img):
+        image = path + img
+        numbers = cv2.imread(image,cv2.IMREAD_GRAYSCALE)
+        plt.imshow(numbers)
+        return numbers
+    
+    def rotator(img):
+        
+
     def imagify(path,img):
         
         image = path + img
