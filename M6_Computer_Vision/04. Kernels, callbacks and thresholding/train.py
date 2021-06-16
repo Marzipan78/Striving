@@ -75,8 +75,12 @@ def train(model, optimizer, criterion):
                 #val_loss.append(loss_val)
         print('Accuracy of the network: %d %%' % (
             100 * correct / total))
+
     end_time = time.time()
+
     print(end_time-start_time)
+
+    
 model = Net()
 criterion = CrossEntropyLoss()
 optimizer = optim.SGD(model.parameters(), lr=0.01)
