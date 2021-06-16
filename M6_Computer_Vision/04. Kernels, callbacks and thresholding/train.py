@@ -3,7 +3,7 @@ from numpy.random import gamma
 from torch import device
 import torch
 from model import Net 
-
+import time 
 #Data
 import data_handler as dh
 import numpy as np
@@ -23,7 +23,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
 
-def train(model, optim, criterion):
+def train(model, optimizer, criterion):
 
     train_loss = []
     val_loss = []
@@ -32,6 +32,7 @@ def train(model, optim, criterion):
     print_every = 50
 
     #optimizer = optim.SGD(model.parameters(), lr=0.1)
+    start_time = time.time()
     for e in range(epochs):
         running_loss = 0
         total = 0
@@ -39,7 +40,8 @@ def train(model, optim, criterion):
         print(f"Epoch: {e+1}/{epochs}")
 
         model.train()
-        for i, (images, labels) in enumerate(iter(dh.train_transform()[1])):
+
+        for i, (images, labels) in enumerate(iter(dh.train_transform())):
 
         
             images.resize_(images.size()[0], 1,28,28).cuda()
@@ -63,7 +65,7 @@ def train(model, optim, criterion):
 
         model.eval()
         with torch.no_grad():
-            for i, (images, labels) in enumerate(iter(dh.test_transform()[1])):
+            for i, (images, labels) in enumerate(iter(dh.test_transform())):
                 images.resize_(images.size()[0], 1,28,28)
                 outputs = model(images.cuda())
                 _, predicted = torch.max(outputs.data, 1)
@@ -73,7 +75,8 @@ def train(model, optim, criterion):
                 #val_loss.append(loss_val)
         print('Accuracy of the network: %d %%' % (
             100 * correct / total))
-
+    end_time = time.time()
+    print(end_time-start_time)
 model = Net()
 criterion = CrossEntropyLoss()
 optimizer = optim.SGD(model.parameters(), lr=0.01)
@@ -82,3 +85,5 @@ if torch.cuda.is_available():
     criterion.cuda()
 
 summary(model,(1, 28, 28))
+
+train(model,optimizer,criterion)

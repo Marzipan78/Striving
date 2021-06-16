@@ -25,21 +25,21 @@ def view_classify(img, ps):
     ax2.set_title('Class Probability')
     ax2.set_xlim(0, 1.1)
 
-def transformer():
+def data_transformer():
 
     transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.5), (0.5)) ])
     return transform 
 
 def train_transform():
     # Download and load the training data
-    trainset    = datasets.MNIST('MNIST_data/', download=True, train=True, transform=transformer)
+    trainset    = datasets.MNIST('MNIST_data/', download=True, train=True, transform=data_transformer())
     trainloader = torch.utils.data.DataLoader(trainset, batch_size=32, shuffle=True)
-    return trainset, trainloader
+    return  trainloader
 
 def test_transform():
     # Download and load the test data
-    testset    = datasets.MNIST('MNIST_data/', download=True, train=False, transform=transformer)
+    testset    = datasets.MNIST('MNIST_data/', download=True, train=False, transform=data_transformer())
     testloader = torch.utils.data.DataLoader(testset, batch_size=32, shuffle=True)
 
-    return testset, testloader 
+    return  testloader 
 
