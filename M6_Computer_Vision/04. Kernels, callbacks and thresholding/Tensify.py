@@ -9,16 +9,16 @@ from torch import optim
 import torch.nn.functional as F
 
 from torchvision import datasets, transforms
-from PIL import Image
-import pytesseract
+# from PIL import Image
+# import pytesseract
 
 class Tensify():
 
-    def image_reader(path,img):
-        image = path + img
-        numbers = cv2.imread(image,cv2.IMREAD_GRAYSCALE)
-        plt.imshow(numbers, cmap='gray')
-        return numbers
+    # def image_reader(path,img):
+    #     image = path + img
+    #     numbers = cv2.imread(image,cv2.IMREAD_GRAYSCALE)
+    #     plt.imshow(numbers, cmap='gray')
+    #     return numbers
     
     # def rotator(img):
            
