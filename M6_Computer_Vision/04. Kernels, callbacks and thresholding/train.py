@@ -55,7 +55,7 @@ def train(model, optimizer, criterion):
             
             running_loss += loss.item()
 
-            train_loss.append(loss)
+            train_loss.append(running_loss/images.shape[0])
         
             
             if i % print_every == 0:
@@ -78,9 +78,11 @@ def train(model, optimizer, criterion):
 
     end_time = time.time()
 
-    print(end_time-start_time)
+    print(f'Time taken' , round(end_time-start_time))
+    plt.plot(train_loss)
+    #plt.plot(val_loss)
+    plt.show()
 
-    
 model = Net()
 criterion = CrossEntropyLoss()
 optimizer = optim.SGD(model.parameters(), lr=0.01)
