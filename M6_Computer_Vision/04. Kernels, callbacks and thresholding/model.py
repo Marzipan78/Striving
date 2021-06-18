@@ -22,7 +22,7 @@ class Net(nn.Module):
             nn.MaxPool2d(2))
         self.layer2 = nn.Sequential(
             nn.Conv2d(16,32,5),
-            #nn.BatchNorm2d(32),
+            nn.BatchNorm2d(32),
             nn.ReLU(inplace=True),
             nn.MaxPool2d(2))
      
