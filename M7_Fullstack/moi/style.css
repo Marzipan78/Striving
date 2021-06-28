@@ -183,10 +183,11 @@ h1 {
         height: 80px;
         margin: 0px;
     }
-    .navbar__toggle .bar{
+    .navbar__toggle .bar {
         display: block;
         cursor: pointer;
-    }
+    } 
+   
     #mobile-menu.is-active.bar:nth-child(2){
         opacity: 0;
     }
