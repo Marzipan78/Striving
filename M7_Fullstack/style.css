@@ -1,4 +1,23 @@
 h1{
     text-align: center; 
 }
+.background{ 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 
+}
+.img_list{
+    width: 10%;
+    height: auto;
+
+}
+
+h2{
+    text-align: center;
+}
+
+p.thick {
+    font-weight: bold;
+}
