@@ -47,18 +47,18 @@ h1 {
     align-items: center;
     cursor: pointer;
     text-decoration: none;
-    font-size: 2em;    
+    font-size: 2rem;    
 }
 
 .fa_gem{
-    margin-right: 0.5em;
+    margin-right: 0.5rem;
 }
 
 .navbar__menu{
     display: flex;
     align-items: center;
     list-style: none;
-    text-align: center;
+    text-align: left;
 }
 
 .navbar__item{
@@ -74,7 +74,7 @@ h1 {
     padding: 0 1rem;
     height: 100%;
 }
-
+/* 
 .navbar__btn{
     display: flex;
     justify-content: center;
@@ -107,4 +107,4 @@ h1 {
 .navbar__links {
     color: #f77062;
     transition: all 0.3s ease;
-}
+} */
