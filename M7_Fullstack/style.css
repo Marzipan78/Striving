@@ -17,9 +17,13 @@ h3{
     text-align: center;
 }
 
+ol{
+    list-style-type: none;
+}
+
 .img_list {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 30%;
   }
