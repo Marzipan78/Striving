@@ -181,6 +181,20 @@ h1 {
         align-items: center;
         width: 80px;
         height: 80px;
-        margins: 0px;
+        margin: 0px;
+    }
+    .navbar__toggle.bar{
+        display: block;
+        cursor: pointer;
+    }
+    #mobile-menu.is-active.bar:nth-child(2){
+        opacity: 0;
+    }
+    #mobile-menu.is-active.bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    #mobile-menu.is-active.bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
     }
 }
+
