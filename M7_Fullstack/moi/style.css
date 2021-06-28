@@ -126,11 +126,12 @@ h1 {
         margin: 0;
         width: 100%;
         position: absolute;
-        top: -1000px;
-        opacity: 0;
+        /* top: -1000px;
+        opacity: 0; */
         transition: all 0.5s ease;
         height: 50vh;
         z-index: -1;
+        background:#131313;
     }
 
     .navbar__menu.active{
@@ -141,7 +142,6 @@ h1 {
         z-index: 99;
         height: 50vh;
         font-size: 1.6rem;
-
     }
 
     #navbar__logo{
@@ -164,11 +164,11 @@ h1 {
         width: 100%;
         display: table;
     }
-    #mobile-menu{
+    #mobile-menu {
         position: absolute;
         top: 20%;
         right: 5%;
-        transform: translate(5%,20%);
+        transform: translate(5%, 20%);
     }
 
     .navbar__btn{
@@ -177,13 +177,13 @@ h1 {
 
     .button{
         display: flex;
-        justify-content:center;
+        justify-content: center;
         align-items: center;
         width: 80px;
         height: 80px;
         margin: 0px;
     }
-    .navbar__toggle.bar{
+    .navbar__toggle .bar{
         display: block;
         cursor: pointer;
     }
