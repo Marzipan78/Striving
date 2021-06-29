@@ -49,16 +49,16 @@ h1 {
     text-decoration: none;
     font-size: 2rem;    
 }
-
+/* 
 .fa_gem{
     margin-right: 0.5rem;
-}
+} */
 
 .navbar__menu{
     display: flex;
     align-items: center;
     list-style: none;
-    text-align: left;
+    text-align: center;
 }
 
 .navbar__item{
@@ -101,14 +101,14 @@ h1 {
 
 .button:hover{
     background: #4837ff;
-    transition: all 0.3s ease;
+    transition: all 0.35s ease;
 }
 
 .navbar__links:hover {
     color: #f77062;
     transition: all 0.3s ease;
 } 
-/* 
+
 @media screen and (max-width: 960px) {
     .navbar__container{
         display: flex;
@@ -120,18 +120,20 @@ h1 {
         padding: 0;
 
     }
+   
     .navbar__menu{
         display: grid;
         grid-template-columns: auto;
         margin: 0;
         width: 100%;
         position: absolute;
-        top: -1000px;
-        opacity: 0;
+        /* top: -1000px;
+        opacity: 0; */
         transition: all 0.5s ease;
         height: 50vh;
         z-index: -1;
         background:#131313;
+        
     }
 
     .navbar__menu.active{
@@ -155,9 +157,11 @@ h1 {
         transition: all 0.3s ease-in-out;
         background: #fff;
     }
+     
     .navbar__item{
         width: 100%;
     }
+    
     .navbar__links{
         text-align: center;
         padding: 2rem;
@@ -179,15 +183,16 @@ h1 {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 80px;
+        width: 100px;
         height: 80px;
         margin: 0px;
     }
-    .navbar__toggle .bar {
+    
+    .navbar__toggle.bar{
         display: block;
         cursor: pointer;
-    } 
-   
+    }
+    /*
     #mobile-menu.is-active.bar:nth-child(2){
         opacity: 0;
     }
@@ -197,7 +202,7 @@ h1 {
     #mobile-menu.is-active.bar:nth-child(3){
         transform: translateY(-8px) rotate(-45deg);
     }
-} */
+} */ 
 
 /* Hero Section CSS */
 /* 
