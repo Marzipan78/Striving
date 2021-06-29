@@ -202,7 +202,7 @@ h1 {
     #mobile-menu.is-active.bar:nth-child(3){
         transform: translateY(-8px) rotate(-45deg);
     }
-} */ 
+}
 
 /* Hero Section CSS */
 
@@ -382,5 +382,4 @@ h1 {
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
 }
-
 
