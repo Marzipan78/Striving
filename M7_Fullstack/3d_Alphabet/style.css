@@ -13,9 +13,9 @@ body{
     left: 150px;
     top: 85px;
     display: inline-block;
-    font-size: 209px;
-    /* font-weight: bolder; */
-    /* font-stretch: ultra-expanded; */
+    font-size: 450px;
+    font-weight: bolder; 
+    font-stretch: ultra-expanded; 
     transform: rotate(0deg);
     background-color: #ff8177;
     background-image: linear-gradient(to top, #db8eff 0%, #0a06ff 100%);
@@ -27,16 +27,16 @@ body{
     font-family: 'Gloria Hallelujah', cursive;
 }
 
-/* #alpha2{
+#alpha2{
     position: absolute;
     left: 165px;
     top: 70px;
     display: inline-block;
     font-size: 450px;
-    /* font-weight: bolder; */
-    /* font-family: 'Gloria Hallelujah', cursive; */
-    /* font-stretch: ultra-expanded; */
-    /* transform: rotate(0deg);
+    font-weight: bolder; 
+    font-family: 'Gloria Hallelujah', cursive; 
+    font-stretch: ultra-expanded; 
+    transform: rotate(0deg);
     background-color: #ff8177;
     background-image: linear-gradient(to top, #ff8177 0%, #06b0ff 100%);
     background-size: 100%;
@@ -44,6 +44,6 @@ body{
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
-} */ 
+} 
 
 
