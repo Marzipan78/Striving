@@ -31,7 +31,7 @@ r = aflr.Speech().create(
 print(r)
 
 # Mastering creation 
-r = aflr.Mastering().create(scriptId=script["scriptId"], backgroundTrackId="full__deepsea.wav")
+r = aflr.Mastering().create(scriptId=script["scriptId"], backgroundTrackId=)
 print(r)
 
 # retrieve the mastered audio files

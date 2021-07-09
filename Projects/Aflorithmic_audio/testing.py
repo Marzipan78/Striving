@@ -3,11 +3,12 @@ import key
 # Add your AFLR_API_KEY here - get it from https://console.api.audio/register aflr 
 aflr.api_key = key.api_key
 # There are 180+ voices to choose from. Try "Joanna", "Amy", or "Salli"
-VOICE="es-ES-AlvaroNeural"
+VOICE="en-GB-Wavenet-B"
 # Apply a voice effect. Can be dark_father, chewie, 88b, 2r2d
-#EFFECT="dark_father"
-TEXT = """Eh FUCK Of"""
-SPEED=90
+EFFECT="dark_father"
+# TEXT = """Oh<break time="100ms"/> <emphasis level=""very strong"">Fuck</emphasis> Off""" 
+TEXT ="""Oh Fuck off"""
+SPEED=100
 # May the 4th background tracks
 # full__fargalaxy_dark_father.wav
 # full__fargalaxy_chewie.wav
@@ -30,7 +31,7 @@ scriptId = script["scriptId"]
 # speech creation
 response = aflr.Speech().create(
   
-    scriptId=scriptId, voice=VOICE, speed=SPEED
+    scriptId=scriptId, voice=VOICE, speed=SPEED, effect = EFFECT
 )
 print(f"Response from dev star: \n {response} \n")
 # mastering process
