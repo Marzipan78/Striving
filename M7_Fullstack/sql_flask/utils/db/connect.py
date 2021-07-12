@@ -9,7 +9,7 @@ USER=config.get("USER")
 PASSWORD=config.get("PASSWORD")    
 PORT=config.get("PORT")   
 
-
+print(HOST)
 def db_engine():
     ##    "postgresql://USER:PASSWORD@HOST:PORT/DBNAME"
     URL = "postgresql://{}:{}@{}:{}/{}".format(USER,PASSWORD,HOST,PORT,DB)
