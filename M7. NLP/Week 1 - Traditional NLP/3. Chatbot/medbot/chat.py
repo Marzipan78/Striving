@@ -23,7 +23,7 @@ model = NeuralNet(input_size, hidden_size, output_size).to(device)
 model.load_state_dict(model_state)
 model.eval()
 
-bot_name = "Bella"
+bot_name = "Jon"
 print("Let's chat! type 'quit' to exit")
 while True:
     sentence = input("You: ")
@@ -46,4 +46,4 @@ while True:
             if tag == intent["tag"]:
                 print(f"{bot_name}: {random.choice(intent['responses'])}")
     else:
-        print(f"{bot_name}: Go fix yourself...")
+        print(f"{bot_name}: Oh Fock Off..")
