@@ -7,10 +7,13 @@ with open('3. Chatbot\my_chatbot\intents.json', 'r') as f:
 all_words = []
 tags = []
 xy = []
-for intnent in intents['intents']:
-    tag = intnent['tag']
+for intent in intents['intents']:
+    tag = intent['tag']
     tags.append(tag)
-    for pattern in intents['patterns']:
+    for pattern in intent['patterns']:
         w = tokenize(pattern)
         all_words.extend(w)
         xy.append((w, tag))
+
+ignore_words = ["?", "!", ".", ",", ";", ":", "...", "'", "’"]
+print(all_words)
