@@ -7,7 +7,7 @@ import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
 from model import NeuralNet 
 
-with open('3. Chatbot\my_chatbot\intents.json', 'r') as f:
+with open('3. Chatbot\medbot\intents.json', 'r') as f:
     intents = json.load(f)
 
 all_words = []
