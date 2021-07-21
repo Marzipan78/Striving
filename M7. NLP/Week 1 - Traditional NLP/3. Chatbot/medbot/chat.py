@@ -6,7 +6,7 @@ from nltk_utils import bag_of_words, tokenize
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-with open('3. Chatbot\my_chatbot\intents.json', 'r') as f:
+with open('3. Chatbot\medbot\intents.json', 'r') as f:
     intents = json.load(f)
 
 FILE = "meddata.pth"

@@ -27,7 +27,8 @@
         "patterns": [
             "Bye", 
             "See you later", 
-            "Goodbye"
+            "Goodbye",
+            "Ciao"
         ],
         "responses": [
             "Bye Bye",
@@ -35,7 +36,9 @@
             "Bye, have a good day",
             "Bye, have a nice day",
             "See you later, thanks for visiting",
-            "Have a nice day"
+            "Have a nice day",
+            "Finally some peace",
+            "Idiot has left the chat"
         ]
     },
     {
@@ -50,7 +53,8 @@
             "Happy to help!",
             "No problem!",
             "Anytime!",
-            "My pleasure"
+            "My pleasure",
+            "Eh.."
         ]
     },
     {
@@ -76,6 +80,7 @@
             "I have a runny nose",
             "I have a sore throat",
             "I have cough and nausia"
+            
         ],
         "responses": [
             "Do you want to book an appointment for tomorrow?",
@@ -97,8 +102,8 @@
             "okay please"
         ],
         "responses": [
-            "Great! I have scheduled an appointment for you",
-            "I have scheduled an appointment for you",
+            "Great! I have scheduled a COVID appointment for you",
+            "I have scheduled a COVID appointment for you",
             "Done",
             "It's Done",
             "It's all done"
