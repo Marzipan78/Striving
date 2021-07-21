@@ -20,7 +20,7 @@ def bag_of_words(tokenized_sentence, all_words):
     """
     sentence = ["hello", "how", "are", "you"]
     words = ["hi", "hello", "I", "you", "bye", "thank", "cool"]
-    bag_of_words = [0, 1, 0, 11, 0, 0, 0]
+    bag_of_words = [0, 1, 0, 1, 0, 0, 0]
     """
     bag = np.zeros(len(all_words), dtype=np.float32)
     
