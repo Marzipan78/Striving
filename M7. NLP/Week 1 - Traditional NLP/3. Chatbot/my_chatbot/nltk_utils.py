@@ -23,4 +23,4 @@ def bag_of_words(tokenized_sentence, all_words):
 
 words = ["organize", "organizes", "organize", "organizing", "organizes", "organizing", "organized", "organizing"]
 stemmed_words = [stem(w) for w in words]
-print(stemmed_words)
+# print(stemmed_words)
