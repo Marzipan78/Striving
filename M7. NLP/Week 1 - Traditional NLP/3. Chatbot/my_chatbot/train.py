@@ -26,7 +26,7 @@ all_words = [stem(w) for w in all_words if w not in ignore_words]
 all_words = sorted(set(all_words))
 tags = sorted(set(tags))
 #print(all_words)
-print(tags)
+#print(tags)
 
 X_train = []
 y_train = []
@@ -66,7 +66,7 @@ num_epochs = 1000
 
 
 dataset = ChatDataset()
-train_loader = DataLoader(dataset=dataset, batch_size=batch_size, shuffle=True, num_workers= 2)
+train_loader = DataLoader(dataset=dataset, batch_size=batch_size, shuffle=True, num_workers= 0)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = NeuralNet(input_size, hidden_size, output_size).to(device)
