@@ -1,7 +1,7 @@
 import torch
 
 x =  torch.randn(3, requires_grad=True) # requires_grad=True, pytorch to save the gradient function used to compute the gradients
-print(x)
+#print(x)
 
 # y = x+2
 # print(y)
@@ -18,14 +18,25 @@ print(x)
 
 # x.requires_grad_(False)
 x.requires_grad_(False)
-print(x)
+#print(x)
 
 # x.detach() , creates a new tensor
 p = x.detach()
-print(p)
+#print(p)
 
 # with torch.no_grad():  # this is a context manager, it is used to disable the gradient tracking
 
 with torch.no_grad():
     q = x + 2
-    print(q)
+    #print(q)
+
+"""Dummy train"""
+
+weights = torch.ones(4, requires_grad=True)
+
+for epoch in range(2):
+    model_output = (weights * 3).sum()
+    
+    model_output.backward()
+    
+    print(weights.grad)
