@@ -6,9 +6,9 @@ print(x)
 y = x+2
 print(y)
 
-z = y*y*2
-z = z.mean()    
+z = y*y*2   # will return multi-dimensional tensor, therefore it is important to specify the arg in the backward() function
+#z = z.mean()    # will return one value, since z is a scalar value there is no need to specify the arg in the backward() function
 print(z)
 
-z.backward()    # dz/dx
+z.backward()    # dz/dx  
 print(x.grad)
