@@ -50,6 +50,9 @@ class SoftwareEngineer:
        
 
     #purposely omiting self
+
+    @staticmethod # adding decorator to see effects
+
     def entry_salary(age):   # EXPECT TypeError: entry_salary() takes 1 positional argument but 2 were given 
         if age < 25:         # Self is automatically passed as the first argument
             return 4000      # however it can be passed to the class
@@ -79,4 +82,5 @@ se2.code_in_language("C++")
 
 #se1.entry_salary(24) # does not  work because of the arg error for omiting self
 print(SoftwareEngineer.entry_salary(24))  # works because of self was ignored
+print(se1.entry_salary(24)) # should work because of the decorator, note self is not passed, therefore will not work for a speqific instance    
 se1.entry_salary_2(24) 
