@@ -45,14 +45,27 @@ class SoftwareEngineer:
         information = f"name = {self.name}, age ={self.age}, level = {self.level}"
         return information        
     
-    # def __eq__(self, other) -> bool:
-    #     pass
-        
+    def __eq__(self, other):    #comparing two objects by name and age, overwriting the default behaviour of Memory address
+        return  self.name == other.name and self.age == other.age 
+       
+
+    #purposely omiting self
+    def entry_salary(age):   # EXPECT TypeError: entry_salary() takes 1 positional argument but 2 were given 
+        if age < 25:         # Self is automatically passed as the first argument
+            return 4000      # however it can be passed to the class
+        if age < 30:
+            return 8000    
+
+    def entry_salary_2(self,age):
+        if age < 25:    
+            return 4000
+        if age < 30:
+            return 8000
 
         
 
 #instances 
-se1 = SoftwareEngineer("Max", 26, "Junior", 4000) 
+se1 = SoftwareEngineer("Max", 26, "Junior", 7000) 
 se2 = SoftwareEngineer("Sara", 20, "Junior", 4000)
 se3 = SoftwareEngineer("Sara", 20, "Junior", 4000)
 
@@ -62,4 +75,8 @@ se1.code_in_language("Python")
 se2.code()
 se2.code_in_language("C++")
 
-print(se2 == se3) # will never be the same as the Memory Address are different
+#print(se2 == se3) # will never be the same as the Memory Address are different
+
+#se1.entry_salary(24) # does not  work because of the arg error for omiting self
+print(SoftwareEngineer.entry_salary(24))  # works because of self was ignored
+se1.entry_salary_2(24) 
