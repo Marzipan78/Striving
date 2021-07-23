@@ -51,3 +51,10 @@ Employee.work(se1) # call parent class method therefore, instance is required as
 
 d = Designer("Jane", 30, 6000)
 d.work()
+
+
+"""POLYMORPHISM"""
+
+employees = [SoftwareEngineer("Jon", 24, 5000, "Junior"),
+             SoftwareEngineer("Anotonio", 26, 7000, "Senior"),
+             Designer("Ubeyt", 25, 4000, "Junior")]
