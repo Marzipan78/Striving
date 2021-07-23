@@ -25,3 +25,4 @@ class SoftwareEngineer:
 
 #instance
 se1 = SoftwareEngineer("Max", 26, "Junior", 5000) 
+print(se1.name, se1.age, se1.level, se1.salary)  # here we refer to the instance attribute (self.name etc) and not the init arugments
