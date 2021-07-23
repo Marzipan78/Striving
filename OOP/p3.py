@@ -43,18 +43,26 @@ class Designer(Employee):   # child class
                         # as it inhereted from Employee
 
 se1 = SoftwareEngineer("John", 30, 5000, "Junior")	
-se1.debug()
+#se1.debug()
 #se1.draw()  #AttributeError: 'SoftwareEngineer' object has no attribute 'draw', cuz it is only part of Designer class
-se1.work()
+#se1.work()
 Employee.work(se1) # call parent class method therefore, instance is required as arg..
 
 
 d = Designer("Jane", 30, 6000)
-d.work()
+#d.work()
 
 
 """POLYMORPHISM"""
 
 employees = [SoftwareEngineer("Jon", 24, 5000, "Junior"),
              SoftwareEngineer("Anotonio", 26, 7000, "Senior"),
-             Designer("Ubeyt", 25, 4000, "Junior")]
+             Designer("Ubeyt", 25, 4000, )]
+
+
+def motivate_employees(employees):
+    for employee in employees:
+        employee.work()
+
+
+motivate_employees(employees)
