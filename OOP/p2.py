@@ -36,17 +36,30 @@ class SoftwareEngineer:
     def code_in_language(self, language):
         print(f"{self.name} is writing code in {language}")
 
-    def information(self):
+    # def information(self):
+    #     information = f"name = {self.name}, age ={self.age}, level = {self.level}"
+    #     return information
+
+    # d-under  methods
+    def __str__(self):
         information = f"name = {self.name}, age ={self.age}, level = {self.level}"
-        return information
+        return information        
+    
+    # def __eq__(self, other) -> bool:
+    #     pass
+        
+
         
 
 #instances 
 se1 = SoftwareEngineer("Max", 26, "Junior", 4000) 
 se2 = SoftwareEngineer("Sara", 20, "Junior", 4000)
+se3 = SoftwareEngineer("Sara", 20, "Junior", 4000)
 
 se1.code()
 se1.code_in_language("Python")
-print(se1.information())
+# print(se1.information())
 se2.code()
 se2.code_in_language("C++")
+
+print(se2 == se3)
