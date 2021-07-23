@@ -12,9 +12,12 @@ se1 = ["Software Engineer", "Felix", 27, "Senior", 6000]
 
 # Class
 class SoftwareEngineer:
+
+    #class atributes
+    alias = "Keyboard Tech"
     
     def __init__(self, name, age, level, salary):
-        # instance attributes
+        # instance attributes belong to only the object created
         self.name = name
         self.age = age
         self.level = level
@@ -26,3 +29,5 @@ class SoftwareEngineer:
 #instance
 se1 = SoftwareEngineer("Max", 26, "Junior", 5000) 
 print(se1.name, se1.age, se1.level, se1.salary)  # here we refer to the instance attribute (self.name etc) and not the init arugments
+print(se1.alias)    # we can access the class attributes using the instance name
+print(SoftwareEngineer.alias) # we can access the class attributes using the class name
