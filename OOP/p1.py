@@ -1,7 +1,7 @@
 """For SOFTWARE ENGINEER"""
 
 # position, name, age, level, salary 
-from typing_extensions import ParamSpecArgs
+
 
 
 se1 = ["Software Engineer", "Sara", 20, "Junior", 4000]
@@ -12,8 +12,16 @@ se1 = ["Software Engineer", "Felix", 27, "Senior", 6000]
 
 # Class
 class SoftwareEngineer:
-    pass 
+    
+    def __init__(self, name, age, level, salary):
+        # instance attributes
+        self.name = name
+        self.age = age
+        self.level = level
+        self.salary = salary
+
+     
 
 
 #instance
-se1 = SoftwareEngineer() 
+se1 = SoftwareEngineer("Max", 26, "Junior", 5000) 
