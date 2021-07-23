@@ -22,18 +22,24 @@ class SoftwareEngineer(Employee):   # child class
         super().__init__(name, age, salary)
         self.level = level
 
-    
+    def debug(self):
+        print(f"{self.name}, is debugging...")
         
 
 class Designer(Employee):   # child class   
-    pass
+    
+
+    def draw(self):
+        print(f"{self.name}, is drawing...")
 
 
 #se = SoftwareEngineer() # TypeError EXPECTED: __init__() missing 2 required positional arguments: 'name' and 'age',
                         # as it inhereted from Employee
 
 se1 = SoftwareEngineer("John", 30, 5000, "Junior")	
-print(se1.level)
+se1.debug()
+se1.draw()  #AttributeError: 'SoftwareEngineer' object has no attribute 'draw', cuz it is only part of Designer class
 
 d = Designer("Jane", 30, 6000)
 d.work()
+d.draw()
