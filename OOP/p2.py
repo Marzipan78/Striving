@@ -62,4 +62,4 @@ se1.code_in_language("Python")
 se2.code()
 se2.code_in_language("C++")
 
-print(se2 == se3)
+print(se2 == se3) # will never be the same as the Memory Address are different
