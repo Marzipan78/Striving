@@ -24,6 +24,9 @@ class SoftwareEngineer(Employee):   # child class
 
     def debug(self):
         print(f"{self.name}, is debugging...")
+
+    def work(self):
+        print(f"{self.name}, is coding...")      
         
 
 class Designer(Employee):   # child class   
@@ -31,6 +34,9 @@ class Designer(Employee):   # child class
 
     def draw(self):
         print(f"{self.name}, is drawing...")
+    
+    def work(self):
+        print(f"{self.name}, is sketching...")   
 
 
 #se = SoftwareEngineer() # TypeError EXPECTED: __init__() missing 2 required positional arguments: 'name' and 'age',
@@ -38,8 +44,10 @@ class Designer(Employee):   # child class
 
 se1 = SoftwareEngineer("John", 30, 5000, "Junior")	
 se1.debug()
-se1.draw()  #AttributeError: 'SoftwareEngineer' object has no attribute 'draw', cuz it is only part of Designer class
+#se1.draw()  #AttributeError: 'SoftwareEngineer' object has no attribute 'draw', cuz it is only part of Designer class
+se1.work()
+Employee.work(se1) # call parent class method therefore, instance is required as arg..
+
 
 d = Designer("Jane", 30, 6000)
 d.work()
-d.draw()
