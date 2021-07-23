@@ -33,9 +33,20 @@ class SoftwareEngineer:
     def code(self):
         print(f"{self.name} is writing code...")
 
+    def code_in_language(self, language):
+        print(f"{self.name} is writing code in {language}")
+
+    def information(self):
+        information = f"name = {self.name}, age ={self.age}, level = {self.level}"
+        return information
+        
+
 #instances 
 se1 = SoftwareEngineer("Max", 26, "Junior", 4000) 
 se2 = SoftwareEngineer("Sara", 20, "Junior", 4000)
 
 se1.code()
+se1.code_in_language("Python")
+print(se1.information())
 se2.code()
+se2.code_in_language("C++")
