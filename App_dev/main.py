@@ -1,6 +1,6 @@
 import kivy
 from kivy.app import App
-from kivy.uix.label import BoxLayout
+from kivy.uix.boxlayout import BoxLayout
 
 kivy.require('1.9.0')
 
