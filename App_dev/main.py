@@ -11,3 +11,4 @@ class RandomNumber(App):
 
 
 randomnumber = RandomNumber()
+randomnumber.run()
