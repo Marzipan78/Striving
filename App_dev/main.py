@@ -2,7 +2,7 @@ import kivy
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 
-kivy.require('1.9.0')
+kivy.require('2.0.0')
 
 class RandomNumber(App):
 
