@@ -44,3 +44,5 @@ def plot_fbank(fbank):
             axes[x,y].get_xaxis().set_visible(False)
             axes[x,y].get_yaxis().set_visible(False)
             i += 1
+
+df = pd.read_csv('data/train.csv')
