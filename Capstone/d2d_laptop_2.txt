@@ -1,0 +1,739 @@
+WEBVTT
+
+00:00:04.400 --> 00:00:06.399
+all right so this is a laptop that's
+
+00:00:06.399 --> 00:00:09.920
+around 650 and it's fantastic so a few
+
+00:00:09.920 --> 00:00:11.440
+months ago really announces that they're
+
+00:00:11.440 --> 00:00:13.599
+getting into the laptop game and my
+
+00:00:13.599 --> 00:00:15.519
+first impression is like okay how good
+
+00:00:15.519 --> 00:00:17.440
+can this stuff really be because
+
+00:00:17.440 --> 00:00:19.920
+it's their first attempt at getting into
+
+00:00:19.920 --> 00:00:21.680
+this stuff right it's the first laptop
+
+00:00:21.680 --> 00:00:24.080
+they've ever made so i was expecting
+
+00:00:24.080 --> 00:00:27.279
+good but nothing great right but it
+
+00:00:27.279 --> 00:00:28.720
+comes available i'm like i gotta see
+
+00:00:28.720 --> 00:00:30.720
+this thing and
+
+00:00:30.720 --> 00:00:31.920
+this is
+
+00:00:31.920 --> 00:00:35.280
+remarkably good for the money so
+
+00:00:35.280 --> 00:00:37.280
+let's just okay the first thing i did
+
+00:00:37.280 --> 00:00:39.600
+when i got in just the the initial
+
+00:00:39.600 --> 00:00:41.280
+reaction is like it's got to be running
+
+00:00:41.280 --> 00:00:43.120
+ads right that's how they're getting the
+
+00:00:43.120 --> 00:00:44.480
+price so low they've got to be running
+
+00:00:44.480 --> 00:00:46.320
+bloatware or some crap in there that
+
+00:00:46.320 --> 00:00:47.520
+people don't want people don't need
+
+00:00:47.520 --> 00:00:48.559
+because so many other companies are
+
+00:00:48.559 --> 00:00:50.079
+doing it so many other laptop companies
+
+00:00:50.079 --> 00:00:52.800
+are putting i don't know norton mcafee
+
+00:00:52.800 --> 00:00:54.879
+crap that nobody wants i'm expecting
+
+00:00:54.879 --> 00:00:56.879
+this to be filled with it
+
+00:00:56.879 --> 00:01:00.160
+nothing there's it's just a plain blank
+
+00:01:00.160 --> 00:01:03.120
+slate windows 10 and i'm like how are
+
+00:01:03.120 --> 00:01:04.479
+they doing it at this point i still have
+
+00:01:04.479 --> 00:01:05.439
+no idea how they're running this thing
+
+00:01:05.439 --> 00:01:07.680
+for 650 bucks so let's talk about the
+
+00:01:07.680 --> 00:01:10.320
+build this is a thin machined aluminum
+
+00:01:10.320 --> 00:01:12.640
+device and it's built really well
+
+00:01:12.640 --> 00:01:14.720
+there's no rough edges that's polished
+
+00:01:14.720 --> 00:01:16.640
+properly and that's the thing when you
+
+00:01:16.640 --> 00:01:19.200
+have metal devices that are inexpensive
+
+00:01:19.200 --> 00:01:21.439
+that's one of the quickest ways and most
+
+00:01:21.439 --> 00:01:23.759
+common ways you can cut costs right just
+
+00:01:23.759 --> 00:01:25.680
+leave the edges rough leave the bottom
+
+00:01:25.680 --> 00:01:28.560
+panels unpolished you see so many other
+
+00:01:28.560 --> 00:01:30.000
+companies do it
+
+00:01:30.000 --> 00:01:32.479
+this is a properly machined and properly
+
+00:01:32.479 --> 00:01:34.479
+finished product it's so weird to see at
+
+00:01:34.479 --> 00:01:36.799
+this price point there is a fairly
+
+00:01:36.799 --> 00:01:38.640
+prominent realme logo on the back which
+
+00:01:38.640 --> 00:01:39.920
+not everyone's gonna like but the screen
+
+00:01:39.920 --> 00:01:42.880
+flex is also slight it's just a solid
+
+00:01:42.880 --> 00:01:45.200
+tanky machine uh one thing i want to
+
+00:01:45.200 --> 00:01:47.360
+mention about the hinge so it is not one
+
+00:01:47.360 --> 00:01:48.720
+hand openable now i mentioned this in
+
+00:01:48.720 --> 00:01:50.399
+some of my videos where you know i talk
+
+00:01:50.399 --> 00:01:51.920
+about the ability or inability of
+
+00:01:51.920 --> 00:01:53.520
+devices people to flip open with one
+
+00:01:53.520 --> 00:01:56.240
+hand and it's not so much the it's not
+
+00:01:56.240 --> 00:01:57.439
+super important right like how many
+
+00:01:57.439 --> 00:01:59.200
+people are just lifting hinges with one
+
+00:01:59.200 --> 00:02:01.119
+hand it's not the point it's the fact
+
+00:02:01.119 --> 00:02:04.240
+that it takes a good amount of time and
+
+00:02:04.240 --> 00:02:07.520
+engineering to tune a hinge just right
+
+00:02:07.520 --> 00:02:09.520
+to have it openable with one hand right
+
+00:02:09.520 --> 00:02:11.200
+so it's not too tight so you can do it
+
+00:02:11.200 --> 00:02:13.200
+but also not too loose what flops back
+
+00:02:13.200 --> 00:02:16.239
+down and this is probably the first
+
+00:02:16.239 --> 00:02:18.000
+point about the real me device that i've
+
+00:02:18.000 --> 00:02:20.400
+been like okay they kind of cut a corner
+
+00:02:20.400 --> 00:02:21.440
+there they didn't spend the time to do
+
+00:02:21.440 --> 00:02:22.720
+that because that
+
+00:02:22.720 --> 00:02:25.120
+it only happens with top tier devices a
+
+00:02:25.120 --> 00:02:27.520
+properly tuned one hand openable hinge
+
+00:02:27.520 --> 00:02:29.599
+okay so the screen is really nice it's a
+
+00:02:29.599 --> 00:02:31.760
+three by two aspect ratio it's high res
+
+00:02:31.760 --> 00:02:33.280
+it's got good brightness good colors
+
+00:02:33.280 --> 00:02:35.920
+it's a really nice screen it is a 60
+
+00:02:35.920 --> 00:02:37.280
+hertz panel so it's not like a high
+
+00:02:37.280 --> 00:02:38.879
+refresh gaming display and it's also got
+
+00:02:38.879 --> 00:02:40.319
+a glossy finish so you might look at the
+
+00:02:40.319 --> 00:02:42.000
+reflectivity of this me like that's a
+
+00:02:42.000 --> 00:02:43.760
+touch screen it's not it's just like a
+
+00:02:43.760 --> 00:02:46.239
+regular screen with a very reflective
+
+00:02:46.239 --> 00:02:47.599
+surface they do have some kind of
+
+00:02:47.599 --> 00:02:49.280
+coating on it to reduce the reflection
+
+00:02:49.280 --> 00:02:51.280
+but if you're used to matte screens this
+
+00:02:51.280 --> 00:02:52.879
+is a very reflective screen kind of like
+
+00:02:52.879 --> 00:02:55.040
+macbooks the whole thing is very macbook
+
+00:02:55.040 --> 00:02:56.319
+like we'll get into that at the end of
+
+00:02:56.319 --> 00:02:58.239
+this but yeah it's
+
+00:02:58.239 --> 00:02:59.040
+meant
+
+00:02:59.040 --> 00:03:02.879
+to go after that macbook aesthetic um oh
+
+00:03:02.879 --> 00:03:05.440
+webcam up top 720p it's not a great
+
+00:03:05.440 --> 00:03:07.280
+webcam but it kind of does the job if
+
+00:03:07.280 --> 00:03:09.440
+you need it there's also a rubber trim
+
+00:03:09.440 --> 00:03:10.800
+that runs around the edge of the screen
+
+00:03:10.800 --> 00:03:12.239
+and it's something that some companies
+
+00:03:12.239 --> 00:03:14.239
+skimp out on again it's like one of
+
+00:03:14.239 --> 00:03:15.840
+those corners that you can cut but they
+
+00:03:15.840 --> 00:03:17.920
+chose not to cut it and when you close a
+
+00:03:17.920 --> 00:03:19.840
+rubber trim to laptop
+
+00:03:19.840 --> 00:03:21.360
+it gives you that nice
+
+00:03:21.360 --> 00:03:24.080
+thump sound okay the keyboard open this
+
+00:03:24.080 --> 00:03:26.879
+thing right back up uh all right so oh
+
+00:03:26.879 --> 00:03:28.239
+another thing the hinge of this thing
+
+00:03:28.239 --> 00:03:30.400
+goes all it doesn't go like perfectly
+
+00:03:30.400 --> 00:03:34.680
+180 it's like close maybe
+
+00:03:34.680 --> 00:03:37.680
+177 degrees but uh yeah it's pretty
+
+00:03:37.680 --> 00:03:39.519
+close to a full
+
+00:03:39.519 --> 00:03:41.360
+flat open if you're looking for that
+
+00:03:41.360 --> 00:03:44.000
+okay keyword so this is a keyboard that
+
+00:03:44.000 --> 00:03:46.400
+is modeled in terms of the layout to a
+
+00:03:46.400 --> 00:03:48.480
+macbook keyboard even the texture on the
+
+00:03:48.480 --> 00:03:50.799
+keys is reminiscent of a macbook it does
+
+00:03:50.799 --> 00:03:53.120
+not type as well as a macbook keyboard i
+
+00:03:53.120 --> 00:03:54.799
+feel like these are
+
+00:03:54.799 --> 00:03:56.640
+just softer it's still a responsive
+
+00:03:56.640 --> 00:03:59.120
+keyboard but it's not as fast to type on
+
+00:03:59.120 --> 00:04:00.879
+that i personally like but i think most
+
+00:04:00.879 --> 00:04:02.319
+people will enjoy this keyboard and just
+
+00:04:02.319 --> 00:04:05.599
+get used to it quickly the trackpad is
+
+00:04:05.599 --> 00:04:07.760
+not like a macbook whatsoever i think
+
+00:04:07.760 --> 00:04:09.680
+this is a plastic surface i looked onto
+
+00:04:09.680 --> 00:04:11.120
+like their press material i couldn't
+
+00:04:11.120 --> 00:04:12.159
+find it
+
+00:04:12.159 --> 00:04:13.920
+i took a knife to it and i tried to
+
+00:04:13.920 --> 00:04:15.680
+scratch it and i was able to scratch it
+
+00:04:15.680 --> 00:04:17.519
+and to me that means it's plastic that's
+
+00:04:17.519 --> 00:04:18.880
+not the best test out there but i think
+
+00:04:18.880 --> 00:04:20.479
+it's a plastic trackpad
+
+00:04:20.479 --> 00:04:23.120
+the surface texture is okay but the
+
+00:04:23.120 --> 00:04:25.120
+click mechanics aren't amazing to me
+
+00:04:25.120 --> 00:04:27.440
+this is a very average trackpad and then
+
+00:04:27.440 --> 00:04:29.280
+on the top right is a power button with
+
+00:04:29.280 --> 00:04:31.120
+the fingerprint sensor that's built into
+
+00:04:31.120 --> 00:04:33.280
+it now let's talk about performance so
+
+00:04:33.280 --> 00:04:36.960
+this comes in an i3 or an i5 mine is the
+
+00:04:36.960 --> 00:04:39.280
+i5 and it performs exactly like what i
+
+00:04:39.280 --> 00:04:40.880
+would expect on a device like this it's
+
+00:04:40.880 --> 00:04:42.880
+cooled properly the fans don't get super
+
+00:04:42.880 --> 00:04:44.880
+loud or anything it is interesting to
+
+00:04:44.880 --> 00:04:46.240
+note that when you pop it open there's
+
+00:04:46.240 --> 00:04:47.919
+two fans in there normally on a device
+
+00:04:47.919 --> 00:04:49.600
+like this with this kind of form factor
+
+00:04:49.600 --> 00:04:51.680
+and this kind of chip it's a single fan
+
+00:04:51.680 --> 00:04:53.360
+like all the competitors i can think of
+
+00:04:53.360 --> 00:04:55.919
+are single fan solutions this is a dual
+
+00:04:55.919 --> 00:04:57.280
+fan i'm not sure if it's like a cost
+
+00:04:57.280 --> 00:04:58.560
+thing or whatever but it was just
+
+00:04:58.560 --> 00:05:00.240
+something i noticed but inside there
+
+00:05:00.240 --> 00:05:01.680
+you're also getting a single nvme that
+
+00:05:01.680 --> 00:05:03.520
+you can replace you get a wi-fi card you
+
+00:05:03.520 --> 00:05:05.680
+can also replace but the ram is baked
+
+00:05:05.680 --> 00:05:07.199
+onto the motherboard unfortunately so
+
+00:05:07.199 --> 00:05:08.960
+you can't upgrade that now the battery
+
+00:05:08.960 --> 00:05:11.280
+is 56 watt hours which isn't super small
+
+00:05:11.280 --> 00:05:13.039
+like on a device like this that's kind
+
+00:05:13.039 --> 00:05:15.199
+of above average i would say but battery
+
+00:05:15.199 --> 00:05:16.960
+life was a little bit short i got six
+
+00:05:16.960 --> 00:05:18.479
+and a half seven hours on this device
+
+00:05:18.479 --> 00:05:20.639
+with my regular testing
+
+00:05:20.639 --> 00:05:22.639
+i do have a feeling that it's
+
+00:05:22.639 --> 00:05:24.560
+that the reason why it's lower is not
+
+00:05:24.560 --> 00:05:26.160
+because of like the hardware but because
+
+00:05:26.160 --> 00:05:29.120
+of software i feel like when you have a
+
+00:05:29.120 --> 00:05:30.960
+a company like a manufacturer that makes
+
+00:05:30.960 --> 00:05:32.639
+laptops that spends more time on the
+
+00:05:32.639 --> 00:05:34.479
+software and tuning that you know
+
+00:05:34.479 --> 00:05:35.840
+synergy between the battery and the
+
+00:05:35.840 --> 00:05:37.520
+energy consumption i think you can get
+
+00:05:37.520 --> 00:05:39.440
+better battery life with that same kind
+
+00:05:39.440 --> 00:05:41.440
+of battery size on other companies and i
+
+00:05:41.440 --> 00:05:42.800
+feel like that's something they could
+
+00:05:42.800 --> 00:05:44.639
+improve on but
+
+00:05:44.639 --> 00:05:46.880
+right now ran a couple times
+
+00:05:46.880 --> 00:05:48.240
+seven just a little bit shy of seven
+
+00:05:48.240 --> 00:05:50.560
+hours on a 56 watt hour battery okay
+
+00:05:50.560 --> 00:05:52.960
+ports so on the left side there's two
+
+00:05:52.960 --> 00:05:54.639
+usbc and then on the right side there's
+
+00:05:54.639 --> 00:05:57.680
+a usb-a a note about these usb-c ports
+
+00:05:57.680 --> 00:05:59.919
+on the i5 variant these are thunderbolt
+
+00:05:59.919 --> 00:06:02.319
+4 compatible on the i3 version they're
+
+00:06:02.319 --> 00:06:04.000
+not they're just regular usb-c ports so
+
+00:06:04.000 --> 00:06:05.280
+depending on what you need or what kind
+
+00:06:05.280 --> 00:06:07.199
+of connectivity you're looking for you
+
+00:06:07.199 --> 00:06:08.800
+might have to make adjustments based on
+
+00:06:08.800 --> 00:06:09.840
+that but
+
+00:06:09.840 --> 00:06:12.160
+yeah i think for most people usb-c is
+
+00:06:12.160 --> 00:06:13.919
+probably good enough so i'm gonna wrap
+
+00:06:13.919 --> 00:06:15.840
+this video up with i guess two things
+
+00:06:15.840 --> 00:06:16.800
+i'm gonna talk about things i really
+
+00:06:16.800 --> 00:06:18.160
+like about this device and things that i
+
+00:06:18.160 --> 00:06:19.919
+think they kind of should have done
+
+00:06:19.919 --> 00:06:21.199
+differently so the first thing i like
+
+00:06:21.199 --> 00:06:24.080
+about is the price 650 bucks at the base
+
+00:06:24.080 --> 00:06:24.960
+is just
+
+00:06:24.960 --> 00:06:27.360
+remarkably good you cannot get this kind
+
+00:06:27.360 --> 00:06:30.319
+of value with this kind of build quality
+
+00:06:30.319 --> 00:06:32.400
+anywhere else i've looked i've tried
+
+00:06:32.400 --> 00:06:33.680
+it's strange to me that they were able
+
+00:06:33.680 --> 00:06:34.960
+to pull this off on their first
+
+00:06:34.960 --> 00:06:36.800
+iteration it's built well it's got a
+
+00:06:36.800 --> 00:06:38.000
+kick-ass screen it's got good
+
+00:06:38.000 --> 00:06:39.759
+performance a good keyboard the only
+
+00:06:39.759 --> 00:06:41.360
+thing that's lacking to me is the
+
+00:06:41.360 --> 00:06:42.639
+trackpad i feel like that could be
+
+00:06:42.639 --> 00:06:44.800
+improved on but the thing that i don't
+
+00:06:44.800 --> 00:06:46.720
+like about what i'm seeing here is that
+
+00:06:46.720 --> 00:06:51.199
+this is clearly a macbook clone right
+
+00:06:51.199 --> 00:06:52.880
+they had the opportunity and clearly the
+
+00:06:52.880 --> 00:06:54.720
+funding to make something amazing they
+
+00:06:54.720 --> 00:06:56.639
+did but why did they have to make it
+
+00:06:56.639 --> 00:06:59.680
+look and feel and smell like a macbook
+
+00:06:59.680 --> 00:07:01.039
+they could have made something unique
+
+00:07:01.039 --> 00:07:03.199
+and something awesome like i get the
+
+00:07:03.199 --> 00:07:04.880
+idea of like you know you see the
+
+00:07:04.880 --> 00:07:06.319
+success of the macbook air and you're
+
+00:07:06.319 --> 00:07:08.080
+like let's replicate that that'll sell
+
+00:07:08.080 --> 00:07:09.280
+but
+
+00:07:09.280 --> 00:07:11.440
+now it's just a macbook clone and
+
+00:07:11.440 --> 00:07:12.800
+there's so many other companies that do
+
+00:07:12.800 --> 00:07:15.039
+something just like that already
+
+00:07:15.039 --> 00:07:16.560
+i felt like they didn't need to do it
+
+00:07:16.560 --> 00:07:18.639
+and i feel like it was if this was a
+
+00:07:18.639 --> 00:07:20.400
+more unique design like something that
+
+00:07:20.400 --> 00:07:23.120
+was just i don't know just not a macbook
+
+00:07:23.120 --> 00:07:24.560
+i wouldn't be even making this complaint
+
+00:07:24.560 --> 00:07:25.919
+here and this would be a slightly
+
+00:07:25.919 --> 00:07:27.280
+different kind of review but i like what
+
+00:07:27.280 --> 00:07:28.479
+they're doing i just don't like the fact
+
+00:07:28.479 --> 00:07:30.800
+that it's a macbook clone uh the other
+
+00:07:30.800 --> 00:07:32.639
+thing i don't love is availability so
+
+00:07:32.639 --> 00:07:34.160
+right now this is only available if i'm
+
+00:07:34.160 --> 00:07:36.080
+not mistaken in the other side of the
+
+00:07:36.080 --> 00:07:38.960
+world like asia in north america
+
+00:07:38.960 --> 00:07:40.560
+we may not see this for a little while
+
+00:07:40.560 --> 00:07:41.919
+and
+
+00:07:41.919 --> 00:07:43.919
+if this was here if this came in north
+
+00:07:43.919 --> 00:07:45.280
+america at this kind of pricing it'd be
+
+00:07:45.280 --> 00:07:47.680
+so disruptive it'd be amazing now it's
+
+00:07:47.680 --> 00:07:49.680
+you can still get it i got it you can
+
+00:07:49.680 --> 00:07:51.039
+import it you can do stuff to get it in
+
+00:07:51.039 --> 00:07:52.160
+but
+
+00:07:52.160 --> 00:07:54.479
+if only it was easily available here
+
+00:07:54.479 --> 00:07:55.440
+it'd be
+
+00:07:55.440 --> 00:07:56.879
+something else okay hope you guys
+
+00:07:56.879 --> 00:07:58.000
+enjoyed this video thumbs if you liked
+
+00:07:58.000 --> 00:07:59.520
+it subs if you loved it see you guys
+
+00:07:59.520 --> 00:08:06.320
+next time
+
+00:08:06.320 --> 00:08:09.389
+[Music]

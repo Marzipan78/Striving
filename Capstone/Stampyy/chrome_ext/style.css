@@ -1,0 +1,203 @@
+
+html, body{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 10px;
+	font-family: 'Roboto Condensed', sans-serif;
+	max-height: 25vh;
+
+}
+
+
+body, html{
+	width: 100%;
+	height: 10vh;
+	color: #fff;
+	background: linear-gradient(90deg, #000000, #242122, #0f0f0f, #000000);
+	background-size: 400% 400%;
+	position: relative;
+	animation: change 10s ease-in-out infinite;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 15px;
+	font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+.btn, #uploader{
+	border: 1px solid #fff;
+	font-size: 1em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	background-color: rgba(167, 34, 34, 0.07);
+	color: rgb(2, 255, 234);
+	border-radius: 3px;
+}
+
+.btn, #uploader{
+	border: 1px solid #fff;
+	font-size: 1em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	background-color: rgba(167, 34, 34, 0.07);
+	color: rgb(0, 255, 242);
+	border-radius: 3px;
+}
+
+.btn, #pick-btn{
+	border: 1px solid #fff;
+	font-size: 1em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	background-color: rgba(167, 34, 34, 0.07);
+	color: rgb(0, 245, 253);
+	border-radius: 3px;
+	padding: 10px;
+}
+
+.btn, #selector{
+	
+	font-size: 1em;
+	letter-spacing: 2px;
+	background-color: transparent;
+	color: rgb(2, 243, 252);
+}
+
+
+.container{
+
+	padding: 20px;
+	margin: 0 auto;
+}
+
+.my-custom-row{
+	background: transparent;
+	height: 100px;
+	
+}
+
+h1{
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	color:aqua;
+	
+	padding: 1rem 1rem;
+
+	font-size: 	70px;
+}
+
+h5{
+	align-items: center;
+
+
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	color:aqua;
+	
+	padding: 1rem 1rem;
+
+	font-size: 20px;
+}
+
+.card {
+	background-color: rgba(255, 255, 255, 0);
+	border-radius: 5px;
+	box-shadow: 0 0 100px #062e9910;
+	color: #000000;
+	padding: 2.5rem 2.5rem;
+	letter-spacing: 0.3rem;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-shadow: 0 0 1px #ffffff;
+	width: 100%;
+	height: 300px;
+}
+
+
+
+
+.card-footer{
+	text-align: center;
+	padding: 1rem;
+	align-items: right;
+}
+.btn-primary{
+	border: 1px solid #fff;
+	font-size: 1em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	background-color: rgba(167, 34, 34, 0.07);
+	color: #fff;
+	border-radius: 3px;
+
+}
+
+
+
+.modal-body{
+	background-color: rgba(15, 15, 15, 0);
+	color: rgba(255, 255, 255, 0);
+}
+.modal-title{
+	color: rgb(0, 0, 0);
+	font-weight: bold;
+	font-size: 1.5em;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+.btn-secondary{
+	color: rgba(24, 192, 150, 0.7);
+
+}
+p{
+	font-size: 1.5em;
+	color: #00ebfc;
+	font-family: 'Roboto Condensed', sans-serif;
+	text-transform: camelcase;
+	letter-spacing: 0.1rem;
+	align-items: left;
+}
+
+.text{
+	font-size: 1.5em;
+	color: #000000;
+
+}
+.experiment{
+	padding: 2rem;
+	font-size: 1.5em;
+	background: transparent;	
+}
+
+.col-md-4{
+	padding: 1rem;
+	margin: 0 auto;
+}
+.col-md-3{
+	padding: 1rem;
+	margin: 0 auto;
+}
+.col-md-6{
+	padding: 1rem;
+	margin: 0 auto;
+}
+
+
+      
+
+
+@keyframes change{
+	0%{
+		background-position: 0 50%;
+	}
+	50%{
+		background-position: 100% 50%;
+	}
+	100%{
+		background-position: 0 50%;
+	}
+}
